@@ -1,0 +1,441 @@
+---
+title: "Game 1: Laarhoven vs. Shapiro"
+author: "Jay Shapiro"
+date: "4/5/2020"
+output: 
+  html_document:
+    theme: cerulean
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<br>
+
+Recently, I had the pleasure of getting to play a game versus a very strong FIDE master, FM Thijs Laarhoven, on the lichess site. The extraordinarily long time control (by online standards) allowed us to have a high quality game, with the port-mortem engine analysis provided by lichess declaring 0 blunders, 0 mistakes, and 2 inaccuracies apiece. Very accurate for a 57 move game! I share with you, dear reader, the moves of the skirmish replete with my own personal annotations:
+
+<br>
+
+**1. e4 c5**<br> 
+**2. Nf3 d6**<br>
+**3. d4 cxd4**<br>
+**4. Nxd4 Nf6**<br>
+**5. Nc3 g6**<br>
+
+<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+library(rchess)
+library(tidyverse)
+library(ggplot2)
+library(plotly)
+
+game <- Chess$new()
+
+fen <- "rnbqkb1r/pp2pp1p/3p1np1/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 6"
+
+game$load(fen)
+```
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+I was quite pleased to be in familiar territory against such a strong opponent; the Sicilian Dragon is one of my favorite openings from either side of the board. 
+
+<br>
+
+**6. Be3 Bg7**<br>
+**7. Be2**<br>
+
+<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "rnbqk2r/pp2ppbp/3p1np1/8/3NP3/2N1B3/PPP1BPPP/R2QK2R b KQkq - 3 7"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+White elects to play the Classical Dragon, which I am less familiar with than the sharper lines. The majority of players that I face go for the typical Yugoslav Attack with their light-squared bishop on c4 instead of on e2.
+
+<br>
+
+**7... Nc6**<br>
+**8. Qd2 Ng4**<br>
+
+<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r1bqk2r/pp2ppbp/2np2p1/8/3NP1n1/2N1B3/PPPQBPPP/R3K2R w KQkq - 6 9"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+The Amsterdam Variation of the Classical Dragon. Black typically castles on his 8th move here, but Ng4 is the next most common response. I wanted to put a question to White's bishops and see if I could garner the bishop pair for myself nice and early.
+
+<br>
+
+**9. Bxg4 Bxg4**<br>
+**10. f3 Bd7**<br>
+**11. Nxc6 bxc6**<br>
+
+<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r2qk2r/p2bppbp/2pp2p1/8/4P3/2N1BP2/PPPQ2PP/R3K2R w KQkq - 0 12"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+An important decision arose on my 11th move; should I take with the pawn or the bishop? Less experienced players might be tempted to capture with the bishop, following the adage about avoiding isolated pawns by keeping their a-pawn and b-pawn connected. The drawback of 11...Bxc6 is that White gets the d5 square for his knight, where it would stand superior to the light-squared bishop. 
+
+<br>
+
+After 12. Bd4 Bxd4 13. Qxd4 0-0 14. 0-0-0, White would have a comfortable game due to his central space advantage with the simple plan of pushing the h-pawn and g-pawn. Black will have to give up his bishop for the knight if it ever hops into d5, and White will thematically recapture with the e-pawn and then double rooks on the e-file against Black's pawn on e7.
+
+<br>
+
+Considering the minor piece imbalance, 11...bxc6 makes more sense. The best way to beat a knight is to restrain it by taking away any squares it could potentially find a strong outpost on, while also finding good diagonals for your bishop. With a pawn on c6, White will never be able to play Nd5, and as a bonus, Black gets the semi-open b-file for his rook, which he will attempt to prove is sufficient compensation for an isolated a-pawn.
+
+<br>
+
+**12. Bd4 0-0**<br>
+**13. Bxg7 Kxg7**<br>
+**14. 0-0-0 Qa5**<br>
+**15. Qd4+**<br>
+
+<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r4r2/p2bppkp/2pp2p1/q7/3QP3/2N2P2/PPP3PP/2KR3R b - - 3 15"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Another critical moment arises that many players would miss. Instinctively, it may seem prudent to step the king off the a1-h8 diagonal; most players would automatically slam down Kg8 in under 5 seconds. The issue with this natural move is that it allows White to play e5 immediately. Black must play d5 in response or lose material, and this creates some issues for him that do not have obvious solutions: 
+
+<br>
+
+1. Black's c-pawn and d-pawn are blocking his light-squared bishop, and neither of them can move yet
+2. The c5 square has become a potential outpost square for the White knight after Na4-Nc5, where it would make the opposing minor piece look silly
+3. The Black queen is cut off from the kingside on the 5th rank
+4. White can play h4 right after Black plays d5 and get his attack started
+
+<br>
+
+Instead, despite GM Ben Finegold's vehement objections ("Never play f6! Argh!!"), playing 15...f6! prevents White from playing e5 and clamps down on the center while still parrying the check.
+
+<br>
+
+**15...f6**<br>
+**16. Qa4**<br>
+
+<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r4r2/p2bp1kp/2pp1pp1/q7/Q3P3/2N2P2/PPP3PP/2KR3R b - - 1 16"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Here I thought for over 10 minutes about how to proceed. I thought with the queens off the board, my attack wouldn't have enough gas and my a-pawn would no longer be useful as a battering ram and would become a weakness in the endgame. I also thought the White queen was poorly placed on a4, so I wasn't particularly interested in a trade. I looked at Qg5+ and Qc7 primarily, and rejected Qg5+ because it gave White a free tempo with h4. The computer likes Qg5+ and Qc5 slightly more than Qc7, but they are all very close in evaluation.
+
+<br>
+
+**16... Qc7**<br>
+**17. h4 a5**<br>
+**18. h5 Rb8**<br>
+**19. Qd4 Rb4?**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "5r2/2qbp1kp/2pp1pp1/p6P/1r1QP3/2N2P2/PPP3P1/2KR3R w - - 3 20"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+I thought Rb4 was a reasonable way to gain a tempo by hitting the queen, but after 20. Qd2 g5, White again has the opportunity to play his e5 break, which would give him the superior game. Fortunately, my opponent missed Qd2 as well, and instead played Qe3, the inferior move that I was anticipating.
+
+<br>
+
+**20. Qe3 g5**<br>
+**21. a3 Qb6**<br>
+
+<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "5r2/3bp1kp/1qpp1p2/p5pP/1r2P3/P1N1QP2/1PP3P1/2KR3R w - - 1 22"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+After a3, I didn't see a reasonable way to retreat the rook. Rbb8 admits that Rb4 was a waste of time and prevent doubling on the b-file. Rb6 allows White to play 22. e5 because after 22...dxe5 23. Rxd7 the Black queen is overworked. Rb7 is the least objectionable retreat because Black can still double rooks, but Black's queen has difficulty getting into the action. Given that White's queen was now better placed in the center and wasn't struggling to join in on his kingside attack, I decided to play Qb6 instead and entice White to swap off the ladies.
+
+<br>
+
+**22. Qxb6 Rxb6**<br>
+**23. g4 Rfb8**<br>
+**24. b3 Be6**<br>
+**25. Rd4**<br>
+
+<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "1r6/4p1kp/1rppbp2/p5pP/3RP1P1/PPN2P2/2P5/2K4R b - - 2 25"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+I want to play c5 here to kick the rook away from the 4th rank, and open the a4-e8 diagonal for my bisop so I could play Bd7 and then a4 to get rid of my isolated pawn. The issue with this move is d5 becomes a future home for the White knight. While the engine sees no issue with c5, I think I should have tried to get in Kf7 and Bd7 first as prepatory moves to defend e7 and allow me to chain c5 directly into a4.
+
+<br>
+
+**25...c5**<br>
+**26. Ra4 Ra6**<br>
+**27. Nd5 Ra7**<br>
+**28. Rd1 Kf7**<br>
+**29. Rc4 Bd7**<br>
+**30. a4 Be6**<br>
+
+<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "1r6/r3pk1p/3pbp2/p1pN2pP/P1R1P1P1/1P3P2/2P5/2KR4 w - - 1 31"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+After White locks up the queenside pawn structure with a4, it seems as though the game is heading for a draw, although there is a little play left in the position. Black can try to make inroads by trading minor pieces and then landing a rook on b4, while White has the option to try for a c3-b4 pawn break combination at some point.
+
+<br>
+
+**31. Rc3 Bc8**<br>
+**32. Kd2 Ba6**<br>
+**33. Ne3 Bc8**<br>
+**34. Ke1 Be6**<br>
+**35. Nc4 Rb4**<br>
+**36. Ne3 Rc7**<br>
+**37. Nd5 **<br>
+
+<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "8/2r1pk1p/3pbp2/p1pN2pP/Pr2P1P1/1PR2P2/2P5/3RK3 b - - 14 37"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+White seizes his chance to fork the Black rooks with his kinght, forcing the minor piece exchange and further simplifying the game.
+
+<br>
+
+**37...Bxd5**<br>
+**38. Rxd5 Ke6**<br>
+**39. Kd2 Kd7**<br>
+**40. Ke3 e6**<br>
+**41. Rd1 e5**<br>
+
+<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "8/2rk3p/3p1p2/p1p1p1pP/Pr2P1P1/1PR1KP2/2P5/3R4 w - - 0 42"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+I thought for over 5 minutes after 41. Rd1, realizing that after 41...e5 the position would be locked up and a draw was the most likely outcome. I was trying to find a plan for a breakthrough in the center with d5 at some point, but there just isn't a way to make progress unfortunately.
+
+<br>
+
+**42. Rcd3 Rd4**<br>
+**43. c3 Rxd3**<br>
+**44. Kxd3 Rb7**<br>
+**45. Kc4 Kc6**<br>
+**46. Rb1**<br>
+
+<br>
+
+The last critical position of the game. It would be quite easy to have tricked oneself into believing the draw was already in hand and fallen alseep at the wheel. I must admit I was mere seconds from playing h6 and patting myself on the back, but then I realized that 47. b4! gives White a winning position after 47...cxb4 48. cxb4 axb4 (48...Rxb4 loses immediately) 49. Rb3! 
+
+<br>
+
+Despite being temporarily down material, White blocks Black's b-pawn, stops Black from playing d5, cuts Black's king off from the b-file, and has an outside passed a-pawn. White's plan is to then play Rd3-Kb3-Rd5, take over control of the center and queenside, eventually pick off the Black b-pawn, and then push his passed pawn.
+
+<br>
+
+A bit of panic started to set in, as this oversight threw my mental entirely off the rails and I only had about 6 minutes left on my clock. I started calculating all these wild variations where my king was fending off the passed pawn in the corner and I was offering a triple pawn sacrifice with d5-f5-e4-g4 to create my own passer out of desperation. With under 3 minutes left, I realised that there was actually a very simple defense that I had overlooked, due to my assumption that b4 should be met with cxb4 to avoid giving White a passed pawn. 
+
+<br>
+
+**46...Ra7!**<br>
+
+<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "8/r6p/2kp1p2/p1p1p1pP/P1K1P1P1/1PP2P2/8/1R6 w - - 5 47"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+White can't break through with 47. b4 due to his a-pawn now being attacked and undefended after 47...axb4. All Black has to due now is make sure that if the White rook is on the a file, the Black rook is on the b-file, and vice versa.
+
+<br>
+
+**47. Ra1 Rb7**<br>
+**48. Ra2 Rb8**<br>
+**49. Rb2 Ra8**<br>
+**50. Rb1 h6**<br>
+**51. Ra1 Rb8**<br>
+**52. Ra3 Rb7**<br>
+**53. Ra2 Rb8**<br>
+**54. Rb2 Ra8**<br>
+**55. Ra2 Rb8**<br>
+**56. Rb2 Ra8**<br>
+**57. Ra2 Rb8**<br>
+      <br>**1/2 - 1/2**
+
+<br>
+
+White employs the Chessbrah patented "dad bod shuffle" with his rook, hoping that Black doesn't understand the position fully and slips up by allowing the b4 pawn break. Black holds firm and earns himself a draw by threefold repetition.
+
+<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "1r6/8/2kp1p1p/p1p1p1pP/P1K1P1P1/1PP2P2/R7/8 w - - 14 58"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+[Site "https://lichess.org/"]
+[Date "April 4th, 2020"]
+[White "FM Thijs Laarhoven"]
+[Black "Jay Shapiro"]
+[Result "1/2-1/2"]
+[WhiteElo "2427"]
+[BlackElo "2040"]
+[Variant "Standard"]
+[TimeControl "G/20 + 60s delay"]
+[ECO "B72"]
+[Opening "Sicilian Defense: Dragon, Classical, Amsterdam Variation"]
+
+<br>
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. Be2 Nc6 8. Qd2 Ng4 9. Bxg4 Bxg4 10. f3 Bd7 11. Nxc6 bxc6 12. Bd4 O-O 13. Bxg7 Kxg7 14. O-O-O Qa5 15. Qd4+ f6 16. Qa4 Qc7 17. h4 a5 18. h5 Rab8 19. Qd4 Rb4 20. Qe3 g5 21. a3 Qb6 22. Qxb6 Rxb6 23. g4 Rfb8 24. b3 Be6 25. Rd4 c5 26. Ra4 Ra6 27. Nd5 Ra7 28. Rd1 Kf7 29. Rc4 Bd7 30. a4 Be6 31. Rc3 Bc8 32. Kd2 Ba6 33. Ne3 Bc8 34. Ke1 Be6 35. Nc4 Rb4 36. Ne3 Rc7 37. Nd5 Bxd5 38. Rxd5 Ke6 39. Kd2 Kd7 40. Ke3 e6 41. Rd1 e5 42. Rcd3 Rd4 43. c3 Rxd3+ 44. Kxd3 Rb7 45. Kc4 Kc6 46. Rb1 Ra7 47. Ra1 Rb7 48. Ra2 Rb8 49. Rb2 Ra8 50. Rb1 h6 51. Ra1 Rb8 52. Ra3 Rb7 53. Ra2 Rb8 54. Rb2 Ra8 55. Ra2 Rb8 56. Rb2 Ra8 57. Ra2 Rb8 1/2-1/2
