@@ -1,0 +1,286 @@
+---
+title: "Game 2: Kraai vs. Shapiro"
+author: "Jay Shapiro"
+date: "4/9/2020"
+output: 
+  html_document:
+    theme: cerulean
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<br>
+
+I no longer recall the exact date of this game, but I believe it was sometime around October 2013. GM Jesse Kraai was on tour for his recently released 'Lisa: A Chess Novel' book and stopped by in Charlottesville to read an excerpt to the audience and play some chess. 
+
+<br>
+
+**1. e4 c5**<br> 
+**2. d4 cxd4**<br>
+**3. c3 dxc3**<br>
+
+The Smith-Morra Gambit Accepted. White offers up a pawn in exchange for superior development and a strong attack, and Black accepts the sacrifice. "The best way to refute a gambit is to accept it." -Wilhelm Steinitz
+
+<br>
+
+**4. Nxc3 Nc6**<br>
+**5. Nf3 d6**<br>
+**6. Bc4 e6**<br>
+**7. 0-0 Be7**<br>
+**8. Qe2 Bd7**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+library(rchess)
+library(tidyverse)
+library(ggplot2)
+library(plotly)
+
+game <- Chess$new()
+
+fen <- "r2qk1nr/pp1bbppp/2npp3/8/2B1P3/2N2N2/PP2QPPP/R1B2RK1 w kq - 4 9"
+
+game$load(fen)
+```
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+The main line for Black here is 8...Nf6 9. Rd1 e5, but I don't like having a backwards pawn on d6 and giving up the d5 square like that, so instead I like to play 8...Bd7. Another reasonable alternative 8th move for Black is a6 to keep White's minor pieces out of b5.
+
+<br>
+
+**9. Rd1 a6**<br>
+**10. Be3 Nf6**<br>
+**11. Rac1 0-0**<br>
+**12. a3 Qc7**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r4rk1/1pqbbppp/p1nppn2/8/2B1P3/P1N1BN2/1P2QPPP/2RR2K1 w - - 1 13"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+A novelty; the first 23 ply had been following Kaufmann-Salvetti, 1996 but after Qc7 the game enters uncharted territory (Salvetti played Qb8). The computer doesn't believe in White's sacrifice at all in this position, giving approximately -1 for 12...Qb8, 12...b5, and 12...Qc7 with Black having a comfortable game.
+
+<br>
+
+**13. Ba2 Rac8**<br>
+**14. Nd5 exd5**<br>
+**15. exd5 Qb8**<br>
+**16. dxc6 Bxc6**<br>
+**17. Nd4 Bd7**<br>
+**18. Bf4 Rxc1**<br>
+**19. Rxc1 Re8**<br>
+**20. h3 Bf8**<br>
+**21. Qd3 Be6?**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "1q2rbk1/1p3ppp/p2pbn2/8/3N1B2/P2Q3P/BP3PP1/2R3K1 w - - 3 22"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+In his haste to simplify the position and increase the advantage of the extra pawn, Black offers up his bishop for the White knight. However, it isn't worth it to give away the bishop pair like that, a simple move like h6 to provide luft for the king and defend the g5 square would have been superior.
+
+<br>
+
+**22. Nxe6 fxe6**<br>
+**23. Bg5?**<br>
+
+White unpins the d-pawn from the Queen voluntarily, allowing Black the opportunity to play d5, which unpins his e-pawn, blunts White's light-squared bishop, and gives the Black knight a nice support point on e4.
+
+<br>
+
+**23 ...Qd8?**<br>
+
+Black misses his chance. 
+
+<br>
+
+**24. Qe3?**<br>
+
+Feeling generous, White offers the option for Black to play d5 once again!<br>
+
+**24...Qd7?**<br>
+
+And again, Black politely declines and plays a passive move instead. <br>
+
+**25. Qb6 Rc8**<br>
+**26. Re1 Re8**<br>
+**27. Qd4 Kf7?**<br>
+
+Black tries to put extra defense on e6, but in doing so he removes a defender from the h7 pawn.
+
+<br>
+
+**28. Qh4 h6**<br>
+**29. Bxf6 gxf6**<br>
+**30. Qh5+ Kg7**<br>
+**31. Re3 f5??**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "4rb2/1p1q2k1/p2pp2p/5p1Q/8/P3R2P/BP3PP1/6K1 w - - 0 32"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Black commits a serious blunder. The simple Kh8 would have kept the game relatively even, but after f5 White dominates with 32. Bxe6 Rxe6 (most other moves lead to mate) 33. Qxf5! Qf7 34. Qxe6 Qxe6 35. Rxe6 and White is up a pawn and the exchange. Luckily for me, my opponent overlooked this line and played the inferior...<br>
+
+**32. Rg3+ Kh8**<br>
+**33. Qg6 Bg7**<br>
+**34. Re3 d5?**<br>
+
+I cannot explain what was going through my head when I played this, it just gives away a pawn for nothing.
+
+<br>
+
+**35. Bxd5 Rd8??**<br>
+Perhaps a bit of tilt from playing the mistake on the previous move, I decide that one free pawn wasn't generous enough and implore that White snatch another one away from me.
+
+<br>
+
+**36. Bxe6 Qc7**<br>
+**37. Re1 Bxb2?**<br>
+
+37. Rd3! would have been lights out for Black. Black forgets that his g7-bishop is guarding h6, but so does White as he does not respond with Qxh6+.
+
+<br>
+
+**38. Bxf5 Qg7**<br>
+**39. Re8+ Rxe8**<br>
+**40. Qxe8+ Qg8**<br>
+**41. Qe3 Qf8**<br>
+**42. Bc2 Bxa3**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "5q1k/1p6/p6p/8/8/b3Q2P/2B2PP1/6K1 w - - 0 43"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Black has somehow managed to recover his material deficit, and technically has connected passed pawns, but the bare Black king will be constantly trying to get away from checks, while White's king has a nice pawn shelter to hide in. White has a much better position, even if not technically winning yet.
+
+<br>
+
+**43. Qc3+ Kg8**<br>
+**44. Qg3+ Kh8**<br>
+**45. Qc3+ Kg8**<br>
+**46. Qb3+ Kh8**<br>
+**47. Qxb7 Qg7**<br>
+**48. Qc8+ Qf8**<br>
+**49. Qxa6 Bc5**<br>
+**50. Qe2 Qe7!?**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "7k/4q3/7p/2b5/8/7P/2B1QPP1/6K1 w - - 3 51"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Deciding whether or not to trade queens is a critical moment here for both sides. I figured that I had a reasonable chance to draw and I wanted to get an active king without having to calculate a flurry of White queen checks.
+
+<br>
+
+**51. Qxe7 Bxe7**<br>
+**52. g3 Kg7**<br>
+**53. Kg2 Kf6**<br>
+**54. f4 Bd6**<br>
+**55. Kf3 Bb4**<br>
+**56. Kf2 Ba5**<br>
+**57. g4 Bd2**<br>
+**58. Kf3 Be1**<br>
+**59. Ke2 Bg3**<br>
+**60. Kf3 Be1**<br>
+**61. Kg2 Bd2**<br>
+**62. Kf3 Be1**<br>
+
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "8/8/5k1p/8/5PP1/5K1P/2B5/4b3 w - - 11 63"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Here the game was drawn by agreement. Black has set up a blockade that White will never be able to force his way through with the opposite-colored bishops, as long as Black prevents White from playing h4, which Black can do by shuffling his bishop on the e1-h4 diagonal indefinitely.
+
+
+
+[Site "Charlottesville, VA"]<br>
+[Date "October XX, 2013"]<br>
+[White "GM Jesse Kraai"]<br>
+[Black "Jay Shapiro"]<br>
+[Result "1/2-1/2"]<br>
+[WhiteElo "2567 USCF"]<br>
+[BlackElo "1770 USCF"]<br>
+[Variant "Standard"]<br>
+[TimeControl "G/20 + 60s delay"]<br>
+[ECO "B72"]<br>
+[Opening "Sicilian Defense: Smith-Morra Gambit Accepted"]<br>
+
+1. e4 c5 2. d4 cxd4 3. c3 dxc3 4. Nxc3 Nc6 5. Nf3 d6 6. Bc4 e6 7. O-O Be7 8. Qe2 Bd7 9. Rd1 a6 10. Be3 Nf6 11. Rac1 O-O 12. a3 Qc7
+13. Ba2 Rac8 14. Nd5 exd5 15. exd5 Qb8 16. dxc6 Bxc6 17. Nd4 Bd7 18. Bf4 Rxc1 19. Rxc1 Re8 20. h3 Bf8 21. Qd3 Be6 22. Nxe6 fxe6 23. Bg5 Qd8 24. Qe3 Qd7
+25. Qb6 Rc8 26. Re1 Re8 27. Qd4 Kf7 28. Qh4 h6 29. Bxf6 gxf6 30. Qh5+ Kg7 31. Re3 f5 32. Rg3+ Kh8 33. Qg6 Bg7 34. Re3 d5 35. Bxd5 Rd8 36. Bxe6 Qc7
+37. Re1 Bxb2 38. Bxf5 Qg7 39. Re8+ Rxe8 40. Qxe8+ Qg8 41. Qe3 Qf8 42. Bc2 Bxa3 43. Qc3+ Kg8 44. Qg3+ Kh8 45. Qc3+ Kg8 46. Qb3+ Kh8 47. Qxb7 Qg7 48. Qc8+ Qf8
+49. Qxa6 Bc5 50. Qe2 Qe7 51. Qxe7 Bxe7 52. g3 Kg7 53. Kg2 Kf6 54. f4 Bd6 55. Kf3 Bb4 56. Kf2 Ba5 57. g4 Bd2 58. Kf3 Be1 59. Ke2 Bg3 60. Kf3 Be1
+61. Kg2 Bd2 62. Kf3 Be1 1/2-1/2
