@@ -1,0 +1,35 @@
+---
+title: "Game 3: GM HardSign vs. Shapiro"
+author: "Jay Shapiro"
+date: "4/xx/2020"
+output: 
+  html_document:
+    theme: cerulean
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<br>
+
+A game played between an unknown grandmaster and myself.
+
+<br>
+
+1 **e4 c5**<br>
+2 **Nf3 d6**<br>
+3 **d4 cxd4**<br>
+4 **Nxd4 Nf6**<br>
+5 **Nc3 g6**<br>
+6 **Be3 Bg7**<br>
+7 **f3 0-0**<br>
+8 **Qd2 Nc6**<br>
+9 **0-0-0 d5**<br>
+
+Once again, I find myself in a Sicilian Dragon against a much higher rated player. This time it's the modern line with White castling queenside instead of deploying the light-squared bishop to c4. If Black plays the same move (Bd7) that he normally would against Bc4, then White gets a sizeable advantage with g4.
+
+<br>
+
+10 **
