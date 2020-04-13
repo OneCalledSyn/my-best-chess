@@ -32,4 +32,44 @@ Once again, I find myself in a Sicilian Dragon against a much higher rated playe
 
 <br>
 
-10 **
+10 **Qe1 ...**<br>
+
+10 exd5 is the most popular move for White by a large margin, and I wasn't used to playing against Qe1. I had to think here for a bit, using 50 seconds on my clock in a 5 minute blitz game. Although it seems excessive, it's very easy to lose the game immediately in the Sicilian if you get out-theory'd, especially against a grandmaster, so it was worth it for me to spend the extra time checking the lines.
+
+<br>
+
+10 **... e6**<br>
+
+The predominant response to Qe1 is actually e5, but I was scared to play that move and instead opted for the second most popular response, which I thought was a little safer by defending d5 again. However, Stockfish does strongly prefer e5 and even suggests e5 again for Black *after* he already plays e6. 
+
+<br>
+
+11 **Kb1 a6**<br>
+12 **h4 h5?**<br>
+
+Panicking when White launches his kingside assault and unsure how to respond, he draws upon his knowledge of the Soltis line in the Sicilian Dragon and meets White's h4 with h5. A better move was Qc7, stepping the queen off the d file where it was lined up with White's d1 rook. After Qc7, the immediate g4 from White doesn't work very well because after dxe4 White is only a little better due to issues defending g4. However, Black playing h5 just begs White to blast open his pawn structure with a g4 thrust. 
+
+<br> 
+
+13 **Be2? Qc7?**<br>
+
+White cautiously plays Be2 to really overprotect his light squared pawns, but this gives Black time to get in e5. Black continues to overlook this idea, but does realize that his queen doesn't belong opposite the White rook and prudently relocates to c7.
+
+<br>
+
+14 **exd5? Nxd5**<br>
+
+White opens up the dark-squared bishop and centralizes Black's knight for him with tempo on the e3 bishop.
+
+<br>
+
+15 **Nxd5 exd5**<br>
+
+After the mindless captures by White, both of Black's bishops have great diagonals with powerful scope on the position. The g4 pawn break for White is not accessible yet and Black will get the e file for his rook, hitting several of White's pieces.
+
+<br>
+
+16 **Qd2 Re8**<br>
+17 **Rhe1 Bd7**<br>
+18 **g4?? ...**<br>
+
