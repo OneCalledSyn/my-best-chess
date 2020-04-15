@@ -1,0 +1,49 @@
+---
+title: "Game 4: Shapiro vs Leopold Le Ruyet"
+author: "Jay Shapiro"
+date: "4/xx/2020"
+output: 
+  html_document:
+    theme: cerulean
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<br>
+
+You know the drill by now.
+
+<br>
+
+1 **e4 e5**<br>
+2 **Nf3 Nc6**<br>
+3 **Bb5 a6**<br>
+4 **Ba4 Nf6**<br>
+5 **0-0 Be7**<br>
+6 **Re1 b5**<br>
+7 **Bb3 0-0**<br>
+8 **c3 d5**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+library(rchess)
+library(tidyverse)
+library(ggplot2)
+library(plotly)
+
+game <- Chess$new()
+
+fen <- "r1bq1rk1/2p1bppp/p1n2n2/1p1pp3/4P3/1BP2N2/PP1P1PPP/RNBQR1K1 w - - 0 9"
+
+game$load(fen)
+```
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
