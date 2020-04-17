@@ -47,3 +47,85 @@ plot(game)
 
 <br>
 
+The move 8...d5 signals the Marshall Attack, an enterprising gambit in the Ruy Lopez where Black forfeits a central pawn for a promising kingside attack. The mainline theory runs very deep in the Marshall, with the lichess.org database having a whopping 934 games played from the position after White's sixteenth move!
+
+<br>
+
+9 **exd5 Nxd5**<br>
+10 **Nxe5 Nxe5**<br>
+11 **Rxe5 c6**<br>
+12 **d4 Bd6**<br>
+13 **Re1 Qh4**<br>
+14 **g3 Qh3**<br>
+15 **Be3 Bg4**<br>
+16 **Qd3 f5**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r4rk1/6pp/p1pb4/1p1n1p2/3P2b1/1BPQB1Pq/PP3P1P/RN2R1K1 w - - 0 17"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Finally deviating from the main line, which is 16...Rae8, and choosing a move which is far less popular but still theory
+
+<br>
+
+17 **f4 Rae8**<br>
+18 **Nd2 Kh8**<b>
+19 **Bxd5 cxd5**<br>
+20 **a4 bxa4**<br>
+21 **Qxa6 Rxe3!**<br>
+
+This move surprised me; I was expecting the more natural Re6, but both moves are playable and have been played before.
+
+<br>
+
+22 **Rxe3 Bxf4**<br>
+23 **Qd3?! ...**<br>
+
+Finally deviating from previously played games (23 Nf1) and striking out into uncharted territory. Although Qd3 is objectively worse than Nf1, I had overweening ambitions about my prospects this game, and I was willing to accept a worse position that allowed me to still push for a win.
+
+<br>
+
+23 **... Bxe3+**<br>
+24 **Qxe3 f4**<br>
+25 **Qe7 Kg8**<br>
+26 **Rf1 f3**<br>
+27 **Rf2 h5?**<br>
+
+Black makes the mistake of boxing his own queen into a claustrophobia-inducing prison on h3. Black's best option would have been to extricate his piece with Qh5 and give up on the pipe dream of mating on g2.
+
+<br>
+
+28 **Qe5 h4**<br>
+29 **gxh4? ...**<br>
+
+The simple 29 Qxd5+ Kh8 30 Qe5 was superior for White.
+
+<br>
+
+29 **... Rf6?**<br>
+
+Again, the simpler move 29...Qxh4 would have been stronger. Black makes matters needlessly complicated.
+
+<br>
+
+30 **Qg3 ...**<br>
+
+Still ignoring the pawn on d5 in favor of the king safety, and also trying to bait Black into playing that move that he does. I thought it was very likely he would automatically play it and overlook the refutation.
+
+<br>
+
+30 **... Rg6??**<br>
+31 **Nxf3 Bxf3??**<br>
+
+I was expecting him to play 31...Bf5
