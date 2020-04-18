@@ -128,4 +128,59 @@ Still ignoring the pawn on d5 in favor of the king safety, and also trying to ba
 30 **... Rg6??**<br>
 31 **Nxf3 Bxf3??**<br>
 
-I was expecting him to play 31...Bf5
+I was expecting him to play 31...Bf5 and pin my queen to my king, which I had planned to meet with 32 Ng5, to break the pin. I wasn't expecting him to just give up the rook on g6 and allow me to simplify into an easily winning endgame.
+
+<br>
+
+32 **Qxg6 Be4**<br>
+33 **Qe8+ Kh7**<br>
+34 **Qh5+ Kg8**<br>
+35 **Qe8+ Kh7**<br>
+36 **Qxa4 ...**<br>
+
+Covering the d1 square to avoid a perpetual check from Black (Qg4-Qd1-Qg4) and picking up a significant material advantage. Black will win the Exchange back over the next few moves, but White will still be ahead by a couple of pawns.
+
+<br>
+
+36 **... Qg4+**<br>
+37 **Kf1 Bd3+**<br>
+38 **Ke1 Qg1+**<br>
+39 **Kd2 Qxf2+**<br>
+40 **Kxd3 Qxb2**<br>
+
+Winning from this point is just simple technique. White needs to march his king up the board while fending off checks from the desperate Black queen.
+
+<br>
+
+41 **Qc2 Qa1**<br>
+42 **c4 Qf1+**<br>
+43 **Kc3+ Kh8**<br>
+
+Picking up another free pawn, White will soon be an extra queen to the good.
+
+<br>
+
+
+44 **cxd5 Qa1+**<br>
+45 **Kd3 Qa6**<br>
+46 **Qc4 Qg6+**<br>
+47 **Kc3 Qb1**<br>
+48 **d6 Qe1+**<br>
+49 **Kb3 Qb1+**<br>
+50 **Ka4 Qb6**<br>
+51 **Qc5 Qa6+**<br>
+52 **Kb4 Qb7+**<br>
+53 **Kc4 Qa6+**<br>
+54 **Kd5 Qa8+**<br>
+55 **Qc6 Qa2+**<br>
+56 **Kc5 Qa5+**<br>
+57 **Qb5 Qa7+**<br>
+58 **Qb6 Qa3+**<br>
+59 **Kc6 Qa4+**<br>
+60 **Kc7 Qc4+**<br>
+61 **Qc5 1-0**<br>
+
+Finally convinced that White will be promoting his d-pawn, Black capitulates and respectfully resigns his hopeless position.
+
+<br>
+
