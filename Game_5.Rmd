@@ -1,0 +1,112 @@
+---
+title: "Game 5: Martin Matthiesen vs Jay Shapiro"
+author: "Jay Shapiro"
+date: "4/xx/2020"
+output: 
+  html_document:
+    theme: cerulean
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<br>
+
+You know the drill by now.
+
+<br>
+
+1 **d4 Nf6**<br>
+2 **Nc3 d5**<br>
+3 **Bf4 c6**<br>
+4 **f3 Bf5**<br>
+5 **e3 e6**<br>
+6 **g4 Bg6**<br>
+7 **h4 h6**<br>
+8 **h5 Bh7**<br>
+
+White expands aggressively on the kingside, gaining tempi by kicking around Black's light-squared bishop. Black will try to show that White has
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+library(rchess)
+library(tidyverse)
+library(ggplot2)
+library(plotly)
+
+game <- Chess$new()
+
+fen <- "rn1qkb1r/pp3ppb/2p1pn1p/3p3P/3P1BP1/2N1PP2/PPP5/R2QKBNR w KQkq - 1 9"
+
+game$load(fen)
+```
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+9 **Bd3 Nbd7**<br>
+10 **Bxh7 Nxh7**<br>
+11 **Qd3 Be7**<br>
+12 **0-0-0 0-0**<br>
+13 **Ne2 Ng5**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r2q1rk1/pp1nbpp1/2p1p2p/3p2nP/3P1BP1/2NQPP2/PPP1N3/2KR3R w - - 6 14"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Both sides complete their minor piece development, castle, and prepare to launch their attacks. White will play on the kingside and Black will counterattack on the queenside.
+
+<br>
+
+14 **Rdf1 b5**<br>
+15 **e4? ...**<br>
+
+Allowing Black to blast open the queenside and center with 15...b4 16 Nd1 dxe4 17 fxe4 c5 while White has to react defensively and has no time to further his own kingside attack.
+
+<br>
+
+15 **... a5?**<br>
+
+Missing the timing on the b4 pawn thrust and allowing White to trade in the center on his own terms.
+
+<br>
+
+16 **exd5 exd5**<br>
+17 **Ng3 b4**<br>
+18 **Nce2 a4**<br>
+19 **Nf5 Bf6?!**<br>
+
+The computer suggests 19...Ne6 for Black here, because machines are fearless and know whether or not an attack fails because they can calculate through to the end. As a puny human, the prospect of facing 19...Ne6 20. Bxh6! gxh6 21. Nxh6+ Kh8 22. Nf5 was too terrifying for my liking.
+
+<br>
+
+20 **Neg3 Qd6**<br>
+21 **Bxg5 Bxg5**<br>
+22 **f4 Bf6**<br>
+23 **Rhg1 c5**<br>
+24 **g5 c4**<br>
+25 **Qf3 hxg5?**<br>
+
+Black starts responding to White's threats instead of pushing his own attack. Better is the aggressive 25...a3! 26 b3 Bxd4 to get the action rolling on the queenside.
+
+<br>
+
+26 **Qxd5? ...**<br>
+
+A greedy pawn grab from White gives Black the opportunity to ramp up his attack with Ra5, gaining a tempo on the queen and making way for the other rook to swing into the action when necessary
