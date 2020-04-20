@@ -109,4 +109,41 @@ Black starts responding to White's threats instead of pushing his own attack. Be
 
 26 **Qxd5? ...**<br>
 
-A greedy pawn grab from White gives Black the opportunity to ramp up his attack with Ra5, gaining a tempo on the queen and making way for the other rook to swing into the action when necessary
+A greedy pawn grab from White gives Black the opportunity to ramp up his attack with Ra5, gaining a tempo on the queen and making way for the other rook to swing into the action on the a-file if necessary.
+
+<br>
+
+26 **... Qc7?**<br>
+
+Missing Ra5, due to thinking that the knight on d7 needed to be defended.
+
+<br>
+
+27 **Ne4 b3**<br>
+28 **a3 Ra5**<br>
+29 **Qxd6 Qb7**<br>
+
+Keeping hopes of a mating attack on the queenside alive, Black eschews a trade of queens.
+
+<br>
+
+30 **Nxf6+ Nxf6**<br>
+31 **Rxg5 Rxf5**<br>
+
+Practically forced. All other moves lead to forced checkmate or a serious loss of material.
+
+<br>
+
+32 **Rxf5?? ...**<br>
+
+White plays the natural looking move using very little time on the clock, which turns out to be immediately losing. The correct response was to sacrifice the rook with 32 Rxg7+! Kxg7 33 Rg1+ Rg5!! 34 Rxg5+ Kh7 35 Qxf6 Qh1+ 36 Kd2 c3+! 37 Kxc3 Qf3+ with a drawn position.
+
+<br>
+
+32 **... Qg2!**<br>
+   **0-1**<br>
+
+Surprisingly, Black has a forced mate in 6 and White is powerless to stop it.
+
+
+
