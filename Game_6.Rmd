@@ -1,0 +1,171 @@
+---
+title: "Game_6"
+author: "Jay Shapiro"
+output: html_document
+---
+
+
+<br>
+
+Moves:
+
+<br>
+
+1 **e4 c5**<br>
+2 **Nf3 d6**<br>
+3 **d4 cxd4**<br>
+4 **Nxd4 Nf6**<br>
+5 **Nc3 a6**<br>
+
+Signaling the Najdorf Sicilian.
+
+<br>
+
+6 **Be3 e5**<br>
+7 **Nb3 Be6**<br>
+8 **f3 h5**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+library(rchess)
+library(tidyverse)
+library(ggplot2)
+library(plotly)
+
+game <- Chess$new()
+
+fen <- "rn1qkb1r/1p3pp1/p2pbn2/4p2p/4P3/1NN1BP2/PPP3PP/R2QKB1R w KQkq - 0 9"
+
+game$load(fen)
+```
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Most common here by Black is Be7, but h5 is popular as well because it prevents White from playing the early g4 pawn thrust, a thematic maneuver in many Najdorf lines.
+
+<br>
+
+9 **Qd2 Nbd7**<br>
+10 **0-0-0 b5**<br>
+11 **Kb1 b4?**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r2qkb1r/3n1pp1/p2pbn2/4p2p/1p2P3/1NN1BP2/PPPQ2PP/1K1R1B1R w kq - 0 12"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+
+Chasing the knight to a square it already intended on moving to anyway, and prematurely launching an attack without his pieces in position, akin to biting into a grilled cheese sandwich before the cheese was put in. Black would have been advised to complete his kingside development with Be7 and 0-0, and position his major pieces with Qc7 and Rc8, before lashing out with his b-pawn to avoid the disappointment of such an inadequate meal.
+
+<br>
+
+12 **Nd5 Bxd5**<br>
+13 **exd5 Be7?!**<br>
+
+Strange that Black was averse to playing Be7 before lunging at the White knight with b4, but when his b-pawn is now swinging loose in the breeze like a clothesline in a tornado, Black decides that it's the perfect time to develop his dark-squared bishop. The simple 13...a5 would have been significantly more sensible and one can only assume that Black had aspirations of gaining a tempo and an open file in exchange for the material deficit, but it amounts to nothing more than a hill of dream beans.
+
+<br>
+
+14 **Qxb4 0-0**<br>
+15 **Na5 Rb8**<br>
+16 **Qd2 Nb6**<br>
+17 **c4! ...**<br>
+
+White is as cool as a cucumber left outside in Antarctica. In absolutely no hurry to play Nc6, he first reinforces his d-pawn with c4, perceiving that Black lacks the gumption to extricate himself from the perilous situation. The knight WILL take up residency on c6 and it isn't taking "no" for an answer.
+
+<br>
+
+17 **... Qc7**<br>
+18 **Nc6 Rb7**<br>
+
+"But Jay", you might wonder aloud, "why didn't you play Nc6 before c4 so that you could fork Black's queen and rook, netting yourself an exchange?" That's obviously a ridiculous question, because I can't hear you; we're separated in spacetime. Despite this seemingly insurmountable obstacle, I have generously predicted your query in advance: I had absolutely no intention of trading my powerful knight for Black's miserable rook. A powerful knight on the 6th rank is sometimes referred to as an 'octopus' because it controls eight squares spread out in a somewhat vaguely tentacular arrangement. It's hard to imagine a creature more terrifying than an eight-tentacled horse, but maybe an eight-legged octopus could give it a run for its money.
+
+<br>
+
+19 **Rc1 Na4**<br>
+20 **b3 Rc8**<br>
+21 **Ka1 Nc5**<br>
+22 **Rc3? ...**<br>
+
+White lets his concentration slip and makes his first real error. While the intent to give extra defense to the b-pawn is understandable, the rook now blocks the queen from defending the a5 square, so Black may push his a-pawn forwards to control the crucial b4 square. Now White will be unable to kick the knight on c5 by playing b4, which was the best move here instead of Rc3. 
+
+<br>
+
+22 **... Bf8?**<br>
+
+Black overlooks his counterplay just as hard as White did, missing the key a5 move.
+
+<br>
+
+23 **Be2? ...**<br>
+
+Continuing to willfully ignore the power of a5!
+
+<br>
+
+23 **... e4?**<br>
+
+Deciding that just missing a5 wasn't sufficiently poor, Black decides to push his pawn forward to play for cheap parlor tricks to try to scam an exchange out of his opponent. White, not yet legally blind, is awake enough to notice that the obvious 24 fxe4 Nfxe4 is much better for Black. The issue with e4 is that if the clumsy 'trap' is avoided, then Black has just given away the d4 square to White, who can then plant his dark-squared bishop on the long diagonal. Furthermore, if Black captures with exf3, White can simply respond with gxf3, and his f-pawn continues to shut out Black's knights from e4 and g4, and White also gets the semi-open g-file to put pressure on the Black king.
+
+<br>
+
+24 **Rb1 exf3**<br>
+25 **exf3 a5**<br>
+
+Black finally gets a5 in, but by now it has lost all of its potency. White would like to play moves such as Bd4/Rg1/Bd1/Qg2 and build up an attack on the kingside, and Black has no counterplay on the queenside or in the center. White owns the entire board and has no interest in sharing his toys with Black.
+
+<br>
+
+26 **a4?? ...*<br>
+
+White's cerebral cortex temporarily switches off and his hand takes hold of the steering wheel of its own accord. Irrational fear of Black playing a4 followed by axb3 leads White to jam down a4 himself so that Black cannot. This just weakens the b-pawn and delays the kingside attack, and if Black had played a4, White could have simply played b4 to hard counter it. White is still winning, but he is desperately trying to throw the game hard enough to become an MLB pitcher.
+
+<br>
+
+26 **... g6**<br>
+27 **Bh6 Nfe4??**<br>
+
+Somewhere deep down inside, Black snaps like a brittle twig under the crushing weight of a fully grown male elephant. His field of vision entirely crimson, he gallops his horse into a thicket of suffering, wildly sacrificing his knight on e4 as if the piece had personally offended his existence. Wholly unperturbed by Black's puerile play, White gleefully accepts the proferred piece.
+
+<br>
+
+28 **fxe4 Nxe4**<br>
+29 **Qd4 Bxh6**<br>
+30 **Qxe4 Bg7**<br>
+31 **Nd4?? ...*<br>
+
+Absolute lunacy enters the frontal lobes of White. His greed for preserving the largest material advantage possible here (up a full minor piece) overwhelms his common sense. A much stronger and pragmatic line is 31 Kb2 Bxc3+ 32 Kxc3, leaving White with a smaller material advantage but maintaining the octopus on c6, having a safe king, a better queen, more space on the queenside and center, and plenty of open lines against Black's king. Black's position would be incredibly cramped, devoid of joy, and waiting for the suffering to end, not unlike a dog in his cage waiting to be taken to the vet for an annual checkup.
+
+<br>
+
+31 **... Qc5**<br>
+
+Another problem with removing the knight from c6 is that it left the c5 square open for Black's queen, where it threatens d4 and also eyes the juicy a3 square where it could give checkmate if White was allowed to pass his turn without moving.
+
+<br>
+
+32 **Rd1 Qa3+**<br>
+33 **Kb1 Bxd4?**<br>
+
+White breathes a massive sigh of relief at Black's ill-advised Better was Qxa4, picking up the free pawn and maintaining pressure against White's queenside. There was no reason for Black to trade off his suddenly good bishop that was wreaking havoc on the dark squares uncontested. White had no way to force a trade for the piece, and it was doing an excellent job pinning White's suddenly much worse knight while also x-raying the rook on c3 and a mate threat on b2.
+
+<br>
+
+34 **Qxd4 Rxb3+**<br>
+35 **Rxb3 Qxb3+**<br>
+
+A crucial moment, as White has three ways to get out of check and one of them is much better than the other two. By far the worst move is Ka1, which is mate in 4 for Black. Better is Kc1, which gives White a large advantage but does allow Black to create a passed pawn on the file and 
