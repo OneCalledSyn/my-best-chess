@@ -1,7 +1,6 @@
 ---
 title: "Game 5: Martin Matthiesen vs Jay Shapiro"
 author: "Jay Shapiro"
-date: "4/xx/2020"
 output: 
   html_document:
     theme: cerulean
