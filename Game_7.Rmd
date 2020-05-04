@@ -1,0 +1,54 @@
+---
+title: 'Game 7: Goldstein''s Revenge'
+author: "Jay Shapiro"
+output: 
+  html_document:
+    theme: cerulean
+  pdf_document: default
+---
+
+<br>
+
+1 **e4 c5**<br>
+2 **Nf3 d6**<br>
+3 **d4 cxd4**<br>
+4 **Nxd4 Nf6**<br>
+5 **Nc3 a6**<br>
+6 **Be3 e5**<br>
+7 **Nb3 Be6**<br>
+8 **f3 h5**<br>
+9 **Qd2 Nbd7**<br>
+10 **0-0-0 b5**<br>
+11 **Kb1 Be7**<br>
+12 **h3 h4**<br>
+13 **Rg1 ...**<br>
+
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+library(rchess)
+library(tidyverse)
+library(ggplot2)
+library(plotly)
+
+game <- Chess$new()
+
+fen <- "r2qk2r/3nbpp1/p2pbn2/1p2p3/4P2p/1NN1BP1P/PPPQ2P1/1K1R1BR1 b kq - 1 13"
+
+game$load(fen)
+```
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Deviating from all previous games at this juncture; here most peple play f4, which is superior because it contests Black's strong center, threatens a possible f5 thrust, and doesn't spend a turn on moving the rook when the g-file might not be where it needs to be deployed. 
+
+<br>
+
+13 **... Nb6**<br>
+14 **g4 d5?**<br>
+
+Black pulls the trigger too early, blowing his chance
