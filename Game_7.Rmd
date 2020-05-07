@@ -51,4 +51,132 @@ Deviating from all previous games at this juncture; here most peple play f4, whi
 13 **... Nb6**<br>
 14 **g4 d5?**<br>
 
-Black pulls the trigger too early, blowing his chance.
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r2qk2r/4bpp1/pn2bn2/1p1pp3/4P1Pp/1NN1BP1P/PPPQ4/1K1R1BR1 w kq - 0 15"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Black pulls the trigger too early, blowing his chance to shut down White's kingside push with hxg3 en passant or by counterattacking on the queenside with b4.
+
+<br>
+
+15 **g5 d4**<br>
+16 **gxf6 Bxf6**<br>
+17 **Qf2 Bxb3**<br>
+18 **axb3 Qc7**<br>
+19 **Nxb5? ...**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r3k2r/2q2pp1/pn3b2/1N2p3/3pP2p/1P2BP1P/1PP2Q2/1K1R1BR1 b kq - 0 19"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+White gets tangled up in his ideas by the lure of a patzer check, sacrificing the wrong minor piece for the wrong pawn. 19 Bxd4 exd4 20 Ne2 would leave White up a clean pawn with good squares for his pieces and a safe king.
+
+<br>
+
+19 **... axb5**<br>
+20 **Bxb5+ Kf8**<br>
+
+White is still better because of his extra pawn and bishop pair, but now he has to be careful because the a-file is now more open than the discrete topology.
+
+<br>
+
+21 **Bg5? ...**<br>
+
+White voluntary offers to give away his bishop pair advantage with a loss of tempo in order to gain...nothing.
+
+<br>
+
+21 **... Qa7?**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r4k1r/q4pp1/1n3b2/1B2p1B1/3pP2p/1P3P1P/1PP2Q2/1K1R2R1 w - - 3 22"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Black generously declines the trade, more concerned about concentrating his firepower on the a-file. However, now that the Black queen is no longer covering the c-file, White can break with 22 c4! and suddenly he has connected passed pawns, his king his flight squares, and his light square bishop is protected all in one move. Note that Black cannot capture with 22...dxc3 en passant after c4 because of 23 Qc5+ Kg8 (23...Be7 24 Bxe7+ Qxe7 25 Qxb6 also loses Black a piece) 24 Bxf6 Qa2+ 25 Kc2 Qxb2+ 26 Kd3 and Black runs out of checks, down a piece and losing much more or getting mated.
+
+<br>
+
+22 **Kc1?? ...**<br>
+
+White plays a game ending blunder, missing the c4 break and failing to notice his bishop on b5 was loose.
+
+<br>
+
+22 **... Qa1+**<br>
+23 **Kd2 Qa5+**<br>
+24 **Kc1 Bxg5+**<br>
+25 **Rxg5 Qxb5**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r4k1r/5pp1/1n6/1q2p1R1/3pP2p/1P3P1P/1PP2Q2/2KR4 w - - 0 26"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+White is totally lost, but play on a few moves hoping for Black to blunder. 
+
+<br>
+
+26 **Rxd4 f6**<br>
+27 **Rf5 Kf7**<br>
+28 **Rd6 Ral+**<br>
+29 **Kd2 0-1**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "7r/5kp1/1n1R1p2/1q2pR2/4P2p/1P3P1P/1PPK1Q2/r7 b - - 5 29"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Seeing that 29...Qb4+ picks off the rook on d6, White throws in the towel.
