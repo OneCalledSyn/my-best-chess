@@ -1,0 +1,29 @@
+---
+title: 'Game 8: Boulevard of Broken Queens'
+author: "Jay Shapiro"
+output: 
+  html_document:
+    theme: cerulean
+  pdf_document: default
+---
+
+<br>
+
+1 **e4 c5**<br>
+2 **Nf3 Nc6**<br>
+3 **d4 cxd4**<br>
+4 **Nxd4 Nf6**<br>
+5 **Nc3 e5**<br>
+
+Black initiates the Pelikan variation of the Sicilian defense by playing e5 to gain tempi by kicking the knight around multiple times. White is amenable to his horse being jabbed with pointy sticks in exchange for control of the d5 outpost and saddling Black with a backwards d-pawn.
+
+<br>
+
+6 **Ndb5 d6**<br>
+
+To prevent White from playing Nd6+ with a large advantage.<br>
+
+7 **Bg5 a6**<br>
+8 **Na3 b5**<br>
+9 **Bxf6 gxf6**<br>
+10 **Nd5 Bg7**<br>
