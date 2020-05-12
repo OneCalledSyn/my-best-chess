@@ -15,15 +15,109 @@ output:
 4 **Nxd4 Nf6**<br>
 5 **Nc3 e5**<br>
 
-Black initiates the Pelikan variation of the Sicilian defense by playing e5 to gain tempi by kicking the knight around multiple times. White is amenable to his horse being jabbed with pointy sticks in exchange for control of the d5 outpost and saddling Black with a backwards d-pawn.
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+library(rchess)
+library(tidyverse)
+library(ggplot2)
+library(plotly)
+
+game <- Chess$new()
+
+fen <- "r1bqkb1r/pp1p1ppp/2n2n2/4p3/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 6"
+
+game$load(fen)
+```
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Black initiates the Sveshnikov variation of the Sicilian defense by playing e5. Black will usually gain tempi by kicking the knight towards the edge of the board with more pawns moves like a6 and b5. White is amenable to his horse being jabbed with pointy sticks in exchange for control of the d5 outpost and saddling Black with a backwards d-pawn.
 
 <br>
 
 6 **Ndb5 d6**<br>
 
-To prevent White from playing Nd6+ with a large advantage.<br>
+White threatened playing Nd6+, winning the bishop pair and impeding Black's ability to castle. Black's reply of d6 is borderline compulsory, although some wayward spirits who are obdurate anti-theorists will play other moves, most notably h6. Black's game after 6...h6 7 Nd6+ Bxd6 8 Qxd6 Qe7 9 Qxe7+ Kxe7 10 Be3 d6 11 f3 Be6 12 0-0-0 a6 isn't totally untenable, but why accept the same weaknesses as in the main line without the advantages?<br>
 
 7 **Bg5 a6**<br>
 8 **Na3 b5**<br>
 9 **Bxf6 gxf6**<br>
 10 **Nd5 Bg7**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r1bqk2r/5pbp/p1np1p2/1p1Np3/4P3/N7/PPP2PPP/R2QKB1R w KQkq - 2 11"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+By electing to forego playing the f5 pawn break here and instead fianchettoing the dark-squared bishop, Black steers the game into the Novosibirsk line. Typically, Black will re-route his c6 knight to e7 to challenge White for the d5 square and initiate an exchange of pieces.
+
+<br>
+
+11 **c3 0-0**<br>
+12 **Nc2 f5**<br>
+13 **exf5 Bxf5**<br>
+14 **Nce3 Be6**<br>
+15 **Bd3 f5**<br>
+16 **Qh5 e4**<br>
+17 **Bc2 Be5?**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r2q1rk1/7p/p1npb3/1p1Nbp1Q/4p3/2P1N3/PPB2PPP/R3K2R w KQ - 2 18"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Both sides had been playing logical developing moves, getting their minors pieces on good squares, ensuring king safety, and fighting for control of the center. Black makes the first misstep  
+
+Be5 isn't a good move for several reasons. First, the bishop is already well-placed on its fianchetto diagonal and it isn't any stronger in the middle of the board, and even becomes more likely to become a target. Second, the Black king is now even more exposed, making moves like g4 even stronger for White than when the bishop was providing some coverage to the king. Third, Black needed to play Ne7 to contest the d5 square and get the knight into the action. One doesn't play the Novosibirsk line to neglect playing Ne7 at some point, since the whole point of putting the bishop on g7 is to leave e7 open for the knight.
+
+<br>
+
+18 **f4 exf3**<br>
+19 **gxf3 Ne7**<br>
+
+Black finally gets Ne7 into his move list, but not until White opened the g-file and broke up Black's strong center pawns, leaving the d-pawn and f-pawn isolated.
+
+<br>
+
+20 **0-0-0 Nxd5**<br>
+21 **Nxd5 Kh8**<br>
+22 **f4? ...**<br>
+
+White rushes things, trying to prematurely blast open the position before getting his king off of the open diagonal. Slipping in Kb1 first before launching the attack was the prudent choice.
+
+<br>
+
+22 **... Bxd5**<br>
+23 **Rxd5 Bxf4+**<br>
+24 **Kb1 Qe7?**<br>
+
+Failing to recognize the danger, Black does not try to trade queens with a move like Qe8 or Qg5, both of which are much better options. With the White queen and bishop both aimed menacingly at h7, Black's indefensible f-pawn, the open g-file, and Black's denuded king, this position is tough and uncomfortable to play.<br>
+
+25 **Rxf5 Be5?**<br>
+
+Black certainly seems to have a penchant for playing Be5 inappropriately, doing it not once, but twice in the last 9 moves! Black needs to trade off some pieces to dull White's attack, and he also needs to get his a-rook into the game, which has not been participating as of yet. Better is 25...Rxf5 26 Qxf5 Rf8 27 Qd3 and only then 27...Be5, with all of Black's pieces seeing action on the board and the danger against the Black king somewhat mitigated.<br>
+
