@@ -1,0 +1,45 @@
+---
+title: 'Game 9: La Manna vs Shapiro '
+author: "Jay Shapiro"
+output: 
+  html_document:
+    theme: cerulean
+  pdf_document: default
+---
+
+<br>
+
+1 **d4 Nf6**<br>
+2 **c4 g6**<br>
+3 **Nc3 d5**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+library(rchess)
+library(tidyverse)
+library(ggplot2)
+library(plotly)
+
+game <- Chess$new()
+
+fen <- "rnbqkb1r/ppp1pp1p/5np1/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 4"
+
+game$load(fen)
+```
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+This setup from Black is the beginning Grünfeld Defense.<br>
+
+4 **cxd5 Nxd5**<br>
+5 **e4 Nxc3**<br>
+6 **bxc3 Bg7**<br>
+7 **Bc4 c5**<br>
+8 **Ne2 Nc6**<br>
+9 **Be3 0-0**<br>
+10 **Rc1 Qa5**<br>
+11 **Kf1
