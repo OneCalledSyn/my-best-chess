@@ -33,13 +33,186 @@ plot(game)
 
 <br>
 
-This setup from Black is the beginning Grünfeld Defense.<br>
+This setup from Black is the beginning Grünfeld Defense. White plays in a classical style, amassing a large pawn center with a c3-d4-e4 pawn formation and will attempt to show the strength of this center control. Black will respond with a hypermodern style, trying to chip away at the center from the flanks and show that White has overextended his pawns and they are not pillars of strength but rather targets. <br>
 
 4 **cxd5 Nxd5**<br>
 5 **e4 Nxc3**<br>
 6 **bxc3 Bg7**<br>
+
+Black gets his powerful dark-sqaured bishop fianchettoed on the a1-h8 diagonal, lining up nicely with the White pawns on c3 and d4.<br>
+
 7 **Bc4 c5**<br>
+
+Black thrusts his c-pawn forward to continue building pressure on White's d-pawn, which is now attacked thrice.<br>
+
 8 **Ne2 Nc6**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r1bqk2r/pp2ppbp/2n3p1/2p5/2BPP3/2P5/P3NPPP/R1BQK2R w KQkq - 2 9"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+White defends the pawn again with his knight, and Black responds in kind by adding his own knight into the fray as a fourth threat on the d-pawn.<br>
+
 9 **Be3 0-0**<br>
 10 **Rc1 Qa5**<br>
-11 **Kf1
+11 **Kf1 Rd8**<br>
+
+White decides to unpin his c-pawn by stepping his king over a square. This may seem strange when White is allowed to simply castle instead, but White would like to keep his rook on the h-file for his future kingside attack, and the White king is relatively safe on f1 for the time being. Black swings his rook into the game on the juicy looking d-file, pinning White's d-pawn to the queen and levying further duress to the d4 square.<br>
+
+12 **h4 h5**<br>
+
+White strikes ahead brazenly with h4, gaining space on the kingside and threatening to denude the cover of the Black king with h5 if unimpeded. Black decides that allowing White to play h5 would be ill-advised, so he plays h5 himself to stymie White's idea and also gain some space on the kingside.<br>
+
+13 **Qb3 e6**<br>
+
+With Black's rook no longer on f8, the pawn on f7 is protected solely by the Black king, the weakest defender of squares in the opening stages of the game. White lines up his queen and bishop to threaten the tender square, so Black plays e6 to brunt the battery along the diagonal and protect his pawn from the vision of the archers on b3 and c4.<br>
+
+14 **d5 ...**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r1br2k1/pp3pb1/2n1p1p1/q1pP3p/2B1P2P/1QP1B3/P3NPP1/2R2K1R b - - 0 14"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+A key moment; White is finally goaded into advancing one of his center pawns. Is it compromising his structural integrity (Black's view) or increasing his spatial advantage in the center (White's view)? The truth of the position will unfold on the battlefield in due time.<br>
+
+14 **... exd5**<br>
+15 **Bxd5 Ne5**<br>
+
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r1br2k1/pp3pb1/6p1/q1pBn2p/4P2P/1QP1B3/P3NPP1/2R2K1R w - - 1 16"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+White's center has already degraded somewhat; the d-pawn is gone and consequently the c-pawn is now isolated, but Black's pawn structure is two sets of pawn chains with no weaknesses. Black has a long-term pawn structure advantage, while White's compensation for his two isolated pawns is a lead in development, which is a short-term dynamic advantage. If White is unable to gain something with the developmental edge, Black will soon have his pieces developed and the long-term advantage will prevail and Black will have the better game.<br>
+
+16 **f3? ...**<br>
+
+White fails to sense the urgency in the position and also overlooks Black's gameplan. Playing f3 overdefends e4, gives the dark-sqaured bishop a hole on f2 to fall back to if necessary, keeps Black's minor pieces away from the g4 square, and prepares a g4 pawn thrust. The issue with f3 is that it's too passive and it hands the initiative over to Black if he plays:
+
+16 **... c4!**<br>
+
+Black finds a powerful pawn move that White has no good answer to:
+A) 17 Qb4 Qxb4 18 cxb4 Be6 19 Bxe6 fxe6 and Black has a passed pawn on the c-file, the d3 square for his knight, and a great diagonal for his bishop<br>
+B) 17 Qb4 Qxb4 18 cxb4 Be6 19 Nf4 Bxd5 20 Nxd5 b5 is similar to the first line, but White's knight is better and Black gets in b5 and firmly cements his passed c-pawn<br>
+C) 17 Qb2 Nd3 wins an exchange<br>
+D) 17 Qb1 Rxd5! 18 exd5 Nd3 19 Rd1 Bf5! 20 Nd4 Qxd5 (20 Qxb7 Re8) gives Black a crushing positional advantage with the useless h1 rook, Black's bishop pair, and superior minor piece activity<br>
+E) 17 Qc2 Rxd5! 18 exd5 Nd3 is similar to D)<br>
+F) 17 Qd1 Be6 18 Nf4 Bxd5 19 Nxd5 Nd3 20 Rc2 Rxd5! 21 exd5 Bxc3 again leaves Black with a huge positional advantage for only a small material deficit
+
+Finding every single possible queen move unpalatable, Black decides to do something else instead.<br>
+
+17 **Bxc4 Nxc4**<br>
+18 **Qxc4 Be6**<br>
+19 **Qb4 Qxa2**<br>
+20 **Kf2 ...**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r2r2k1/pp3pb1/4b1p1/7p/1Q2P2P/2P1BP2/q3NKP1/2R4R b - - 1 20"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Black has a dream position: He has the bishop pair, both bishops have beautiful scope, his pawn structure has no flaws, he has an outside protected passed pawn, he controls the d-file, he infiltrated White's second rank, and his king is safe. Meanwhile, White is suffering. He has an isolated c-pawn, neither of his rooks are on open files, his knight is pinned and only on the second rank, his king is stuck defending his pinned knight, and his bishop is not looking at key squares, despite the long diagonals it has access to. Black should play a5 here and get his win condition rolling, which is push on the queenside and force White to give up material to stop Black from making a new queen.<br>
+
+20 **... b6?**<br>
+
+A waste of time like this is inexcusable when Black has the initiative and White's pieces are uncoordinated. White cannot take the b-pawn anyway, for example 20...a5 21 Qxb7? Rab8 22 Qc7 (else 22...Rb2) Rdc8 and Black will play Rb2 and Bc4 after the White queen moves away.<br>
+
+21 **Ra1 Qc4**<br>
+22 **Qxc4 Bxc4**<br>
+23 **Nd4 a5**<br>
+24 **Rhb1 ...**<br>
+
+
+Black is still better from the bishop pair, passed pawn, and superior structure, but White has managed to alleviate about half of the issues he was dealing with for no tradeoff. His king is no longer in danger, his knight is unpinned and centralized, and both of his rooks are on great files.<br>
+
+24 **... b5**<br>
+25 **Nxb5 Bxb5**<br>
+26 **Rxb5 Bxc3**<br>
+
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r2r2k1/5p2/6p1/pR5p/4P2P/2b1BP2/5KP1/R7 w - - 0 27"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+White continues to improve his position, or rather, Black continues to improve White's position, as he is the one forcing the play. White has a totally healthy pawn structure, since Black forced him to trade off his isolated c-pawn, and all of his pieces are active and on good squares. The position should now probably be a draw since Black has no way to force the passed pawn through, but Black will obviously play on since he is the only one with winning chances here.<br>
+
+27 **Ra2 Rdb8**<br>
+28 **Rc5? ...**<br>
+
+White has the easy drawing line of 28 Rxb8+ Rxb8 29 Ke2 Rb2+ 30 Rxb2 Bxb2 31 Kd3 and Black has no way to make progress. Instead, after the actual moves played:<br>
+
+28 **... Rb2+**<br>
+29 **Rxb2 Bxb2**<br>
+30 **Rc2 Bf6**<br>
+31 **g3 a4**<br>
+32 **Ra2 a3?**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r5k1/5p2/5bp1/7p/p3P2P/4BPP1/R4K2/8 b - - 1 32"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
