@@ -1,0 +1,152 @@
+---
+title: "Game 10: GM Zhigalko vs Shapiro"
+author: "Jay Shapiro"
+output: 
+  html_document:
+    theme: cerulean
+  pdf_document: default
+---
+
+<br>
+
+1 **e4 c5**<br>
+2 **Nf3 d6**<br>
+3 **d4 cxd4**<br>
+4 **Nxd4 Nf6**<br>
+5 **Nc3 g6**<br>
+6 **Be3 Bg7**<br>
+7 **Be2 0-0**<br>
+8 **Qd2 Ng4?!**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+library(rchess)
+library(tidyverse)
+library(ggplot2)
+library(plotly)
+
+game <- Chess$new()
+
+fen <- "rnbq1rk1/pp2ppbp/3p2p1/8/3NP1n1/2N1B3/PPPQBPPP/R3K2R w KQ - 6 9"
+
+game$load(fen)
+```
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Black strives to grab the bishop pair, but his sortie is premature. The judicious player would calmly develop his knight to the c6 square instead of moving a developed piece a second time in the first eight moves.<br>
+
+9 **Bxg4 Bxg4**<br>
+10 **f3 Bd7**<br>
+11 **0-0-0?! ...**<br>
+
+White fails to take advantage of the fact that Black's queenside is undeveloped and the knight that normally stands guard from f6 has been traded  off. More accurate is h4, immediately bombarding the lodgings of the Black monarch; Black cannot respond with the typical h5 counterthrust without his knight, for example 11 h4 h5? 12 g4 hxg4 13 0-0-0 followed by 14 h5 and the pawn shelter is already crumbling for Black.<br>
+
+11 **... Nc6**<br>
+12 **g4? ...**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r2q1rk1/pp1bppbp/2np2p1/8/3NP1P1/2N1BP2/PPPQ3P/2KR3R b - - 0 12"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+In an ideal world, Black would like to get his knight to e5, where it puts pressure on f3 and g4, while also threatening the irritating Nc4, forking White's empress and bishop. He would also like to get his own queen to a5, where it controls key defensive squares such as g5 and h5, while also putting pressure on the a2 pawn and the c3 knight, thematic targets in many lines of the Sicilian Dragon. The rooks will pressure from the c-file, hitting the c3 square as well as lining up across from the White king, and the dark-squared bishop is already on the perfect diagonal, hitting the crucial squares d4, c3, and b2. 
+
+What does White want to do? He simply wants to jam his kingside pawns into the gates of the sable fortress, cracking the walls enough for his queen and rooks to deliver a mating attack, and deny Black's queenside attack as much as possible. All previous games with the same beginning 22 ply were continued with either 12 Nxc6, 12 Kb1, or 12 h4. The issue with moves such as h4/g4 is that those only further White's attacking plans, but do nothing to thwart Black's plans. Kb1 is a solid defensive move that gets the king off of the dangerous c-file, but it doesn't progress White's attack and it doesn't cause Black to flinch at all.
+
+The correct retort against Black's setup is 12 Nxc6 bxc6 13 Bh6, which achieves a number of goals. Black is forced to trade off his powerful dark-squared bishop, Black has no knight to deploy to e5 any longer, the Black rooks no longer have access to the now closed c-file, and Black has one less piece defending his kingside.<br>
+
+12 **... Rc8?**<br>
+
+Black fails to capitalize on the space White has afforded him with Ne5. White could now play 13 Nxc6 and after bxc6, the rook is now on a closed file and will need to move again to achieve its latent potential.<br>
+
+13 **h4? ...**<br>
+
+Once again, White fails in the prophylaxis category, still leaving Black the option of playing Ne5 with advantage.<br>
+
+13 **... Ne5**<br>
+
+Black will not let the opportunity pass by a second time and centralizes his knight.<br>
+
+14 **h5 Nc4**<br>
+15 **Qe2 Qb6!**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "2r2rk1/pp1bppbp/1q1p2p1/7P/2nNP1P1/2N1BP2/PPP1Q3/2KR3R w - - 3 16"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Black weaves in a neat little intermezzo before capturing the dark-squared bishop, threating mate on b2.<br>
+
+16 **b3 Nxe3**<br>
+
+Even stronger is 16... Qa5 17 bxc4 Qxc3 18 Qd3 Qxc4, winning a pawn and crumbling White's queenside pawn structure.<br>
+
+17 **Qxe3 e5??**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "2r2rk1/pp1b1pbp/1q1p2p1/4p2P/3NP1P1/1PN1QP2/P1P5/2KR3R w - - 0 18"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Black gets his move order twisted, leading to immediate ruin; 17...Qc5 18 Kb2 e5 was handily winning.<br>
+
+18 **Nd5! Qc5??**<br>
+
+Unwilling to concede that e5 was a mistake, Black forges ahead with his queenside plans and gives White a forced mating sequence. Best was to play the humble 18...Qd8 and grovel pitifully for mercy.<br>
+
+19 **Ne7+ Kh8**<br>
+20 **hxg6 fxg6**<br>
+21 **Rxh7+ Kxh7**<br>
+22 **Rh1+ Bh6**<br>
+23 **Qxh6#**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "2r2r2/pp1bN2k/3p2pQ/2q1p3/3NP1P1/1P3P2/P1P5/2K4R b - - 0 23"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
