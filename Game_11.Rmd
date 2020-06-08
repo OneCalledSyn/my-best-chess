@@ -1,6 +1,5 @@
 ---
-title: "Game 11"
-author: "Jay Shapiro"
+title: "Game 11: Kamsky vs Shapiro"
 author: "Jay Shapiro"
 output: 
   html_document:
@@ -10,4 +9,8 @@ output:
 
 <br>
 
-1 **
+1 **e4 c5**<br>
+2 **Nf3 d6**<br>
+3 **d4 cxd4**<br>
+4 **Nxd4 Nf6**<br>
+5 **Nc3 g6**<br>
