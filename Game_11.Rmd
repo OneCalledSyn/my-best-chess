@@ -7,6 +7,9 @@ output:
   pdf_document: default
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 <br>
 
 1 **e4 c5**<br>
@@ -14,3 +17,180 @@ output:
 3 **d4 cxd4**<br>
 4 **Nxd4 Nf6**<br>
 5 **Nc3 g6**<br>
+6 **Be2 Bg7**<br>
+
+Many of the strong players I have been facing these days have been playing the Classical setup against the Dragon. Kamsky has used this opening to great effect in the past, even beating Carlsen
+with it during the 2009 Amber Rapid.
+
+<br>
+
+7 **0-0 0-0**<br>
+8 **Be3 Nc6**<br>
+
+Learning from the game against GM Zhigalko, Black remembers to include Nc6 before playing Ng4 this time.
+
+<br>
+
+9 **Qd2 Ng4**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+library(rchess)
+library(tidyverse)
+library(ggplot2)
+library(plotly)
+
+game <- Chess$new()
+
+fen <- "r1bq1rk1/pp2ppbp/2np2p1/8/3NP1n1/2N1B3/PPPQBPPP/R4RK1 w - - 8 10"
+
+game$load(fen)
+```
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+This is a very standard position in the Classical Dragon, and almost always White will capture on g4 and retain a slight edge out of the opening. Here Kamsky elects to mix things up a bit, perhaps in an attempt to force me out of book.
+
+<br>
+
+10 **Nxc6 bxc6**<br>
+
+White will no longer have the d5 square available for his knight to take up residency in.<br>
+
+11 **Bxg4 Bxg4**<br>
+12 **Bh6 Qa5**<br>
+13 **Bxg7 Kxg7**<br>
+14 **b3 Rad8**<br>
+15 **h3 Bc8**<br>
+
+Deciding that the bishop wouldn't get much action staring at b3 from e6, Black looks to reroute to either a6 or b7 for a different vantage point.<br>
+
+16 **Rad1 f6**<br>
+17 **Qe3 Rd7**<br>
+18 **f4 Ba6**<br>
+19 **Rf3 e5**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "5r2/p2r2kp/b1pp1pp1/q3p3/4PP2/1PN1QR1P/P1P3P1/3R2K1 w - - 0 20"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+plot(game)
+```
+<br>
+
+Black makes a well-timed central thrust to gain space and contest the White pawn phalanx. The game is relatively even at this point, 
+with Black's only real weakness being his isolated pawn on a7, offset by having the bishop vs White's knight.<br>
+
+20 **Na4 ...**<br>
+
+During the game, Na4 seemed to be irritating because White wants to play c4, which shuts the Black bishop out of the game and also puts a Maroczy-esque clamp on the d5 square.
+In reality, White cannot play c4 immediately because of the simple Bxc4, so he would first have to play Rc1 to cover c4 again. Additionally, the White knight cannot go anywhere except
+back to c3 or else White loses a pawn to Qxa2. The knight isn't well-placed on the edge of the board and White's manoevre is somewhat slow and cumbersome, taking the sting out of it.<br>
+
+20 **... Bb5??**<br>
+
+A perfectly good position for Black, immediately flushed down the drain in one terrible moment of laziness. I wanted to deny Kamsky the pleasure of playing c4, and I saw that he had no way to add extra defenses to the a4 square, so he would have to move the knight or lose material. The fatal assumption I made was that he would simply move the knight back to c3, and I could simply move my bishop back to a6, asking him 'do you have a better plan or is a three move repetition the best you can find?' Although I only spent about a minute on this move, we both had about 11 minutes left on the clock and Bb5 looked relatively safe and I wanted to conserve time for the 'harder' decisions down the road; I had no illusions about being able to go toe-to-toe in time trouble with a previous World Championship challenger, but I did manage to convince myself that I could with enough time on the clock.<br>
+
+21 **Nc5! Be2!**<br>
+
+It feels wrong somehow to give an exclamation mark to Ne2, since Black is still up the creek without a paddle or even a canoe, but it's the only try that could possibly save the position if White doesn't continue accurately. For example:<br>
+
+22 **Ne6+? ...**<br>
+
+While Ne6+ is still better for White, Kamsky overlooks his chance to bury Black alive with 22. Nxd7 Bxd1 23. Nxd8 Bxf3 24. Ne6+ Kf7 25. f5! and Black doesn't have time to move his bishop to safety in light of 25...Bd1 26. Qh6!:<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "8/p4k1p/2ppNppQ/q3pP2/4P3/1P5P/P1P3P1/3b2K1 b - - 2 26"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+plot(game)
+```
+<br>
+
+22 **... Kf7**<br>
+23 **Qxe2 Kxe6**<br>
+24 **Qc4+ Ke7**<br>
+25 **Qxc6 ...**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "5r2/p2rk2p/2Qp1pp1/q3p3/4PP2/1P3R1P/P1P3P1/3R2K1 b - - 0 25"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+plot(game)
+```
+<br>
+
+White nets himself a clean pawn, but Black still has a lot of fight left in him with all the majors pieces still on the board.<br>
+
+25 **... Rfd8?**<br>
+
+Best is 25...efx4 26. Rxf4 Qc7 to trade off queens and/or get some counterplay on the c file. While it looks nice to double the rooks on the d-file, Black will never have the chance to unleash them upon White.<br>
+
+26 **fxe5 fxe5**<br>
+27 **Rdf1 Qc5+**<br>
+28 **Qxc5 dxc5**<br>
+
+Black gets the ladies out of play and opens the d-file for his rooks, but White descends upon his towers like vultures on a newly minted corpse.<br>
+
+29 **Rf7+ Kd6**<br>
+30 **Rd1+ Kc6**<br>
+31 **Rdxd7 Rxd7**<br>
+32 **Rxd7 Kxd7**<br>
+33 **Kf2 a5?**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "8/3k3p/6p1/p1p1p3/4P3/1P5P/P1P2KP1/8 w - - 0 34"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+plot(game)
+```
+<br>
+
+More prudent for Black is 33...Kc6 to rush his king to the queenside pawns as fast as possible, but at this point it hardly matters. White is slowly sealing Black's tomb while he can only watch helplessly from inside.<br>
+
+34 **Ke3 c4**<br>
+35 **Kd2 Kc6**<br>
+36 **Kc3 Kc5**<br>
+37 **h4 h6**<br>
+38 **a4 g5**<br>
+39 **hxg5 hxg5**<br>
+40 **g4 cxb3**<br>
+
+Black's last hope is that White has a temporary bout of insanity and grabs his King by mistake, as 41. Kxb3 is winning for Black.<br>
+
+41 **cxb3 1-0**<br>
+
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "8/8/8/p1k1p1p1/P3P1P1/1PK5/8/8 b - - 0 41"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+plot(game)
+```
+<br>
+
+White's extra pawn and the opposition his King has ends the game. Black's king will be forced away from the fifth rank and the White king penetrates easily. Note that if White's extra b-pawn were removed from the board, the game would be a dead draw as Black could shuffle between d6/c6/b6/c5 to keep away the White king. The only entry point to the fifth rank for the White king would be from c4, so Black only need ensure that when White plays Kc4, he can respond with Kc6 to keep the opposition and box out the other monarch.<br> 
