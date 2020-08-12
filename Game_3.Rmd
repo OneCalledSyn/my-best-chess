@@ -1,7 +1,6 @@
 ---
 title: "Game 3: GM HardSign vs. Shapiro"
 author: "Jay Shapiro"
-date: "4/xx/2020"
 output: 
   html_document:
     theme: cerulean
@@ -14,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <br>
 
-A game played between an unknown grandmaster and myself.
+A game played between an anonymous grandmaster and myself.
 
 <br>
 
@@ -27,6 +26,24 @@ A game played between an unknown grandmaster and myself.
 7 **f3 0-0**<br>
 8 **Qd2 Nc6**<br>
 9 **0-0-0 d5**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+library(rchess)
+library(tidyverse)
+library(ggplot2)
+library(plotly)
+
+game <- Chess$new()
+
+fen <- "r1bq1rk1/pp2ppbp/2n2np1/3p4/3NP3/2N1BP2/PPPQ2PP/2KR1B1R w - - 0 10"
+
+game$load(fen)
+```
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
 
 Once again, I find myself in a Sicilian Dragon against a much higher rated player. This time it's the modern line with White castling queenside instead of deploying the light-squared bishop to c4. If Black plays the same move (Bd7) that he normally would against Bc4, then White gets a sizeable advantage with g4.
 
@@ -47,7 +64,7 @@ The predominant response to Qe1 is actually e5, but I was scared to play that mo
 11 **Kb1 a6**<br>
 12 **h4 h5?**<br>
 
-Panicking when White launches his kingside assault and unsure how to respond, he draws upon his knowledge of the Soltis line in the Sicilian Dragon and meets White's h4 with h5. A better move was Qc7, stepping the queen off the d file where it was lined up with White's d1 rook. After Qc7, the immediate g4 from White doesn't work very well because after dxe4 White is only a little better due to issues defending g4. However, Black playing h5 just begs White to blast open his pawn structure with a g4 thrust. 
+Panicking when White launches his kingside assault and unsure how to respond, he draws upon his knowledge of the Soltis line in the Sicilian Dragon and meets White's h4 with h5. A better move was Qc7, stepping the queen off the d-file where it was lined up with White's d1 rook. After Qc7, the immediate g4 from White doesn't work very well because after dxe4 White is only a little better due to issues defending g4. However, Black playing h5 just begs White to blast open his pawn structure with a g4 thrust. 
 
 <br> 
 
@@ -65,7 +82,22 @@ White opens up the dark-squared bishop and centralizes Black's knight for him wi
 
 15 **Nxd5 exd5**<br>
 
-After the mindless captures by White, both of Black's bishops have great diagonals with powerful scope on the position. The g4 pawn break for White is not accessible yet and Black will get the e file for his rook, hitting several of White's pieces.
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r1b2rk1/1pq2pb1/p1n3p1/3p3p/3N3P/4BP2/PPP1B1P1/1K1RQ2R w - - 0 16"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+After the mindless captures by White, both of Black's bishops have great diagonals with powerful scope on the position. The g4 pawn break for White is not accessible yet and Black will get the e-file for his rook, hitting several of White's pieces.
 
 <br>
 
@@ -73,3 +105,89 @@ After the mindless captures by White, both of Black's bishops have great diagona
 17 **Rhe1 Bd7**<br>
 18 **g4?? ...**<br>
 
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r3r1k1/1pqb1pb1/p1n3p1/3p3p/3N2PP/4BP2/PPPQB3/1K1RR3 b - - 0 18"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Ignoring the power of Black's rook on the e file and the firepower trained on d4. Stockfish actually recommends 18 Bf1 just to get extra defense on the dark sqaured bishop on e3 from the rook on e1. The problem with the text move is after 18...Rxe3! 19 Qxe3 Nxd4 20 Rxd4 Re8 21 Qf2 Bxd4 22 Qxd4 hxg5 23 fxg5 Qg3 and White is losing serious material due to the pin on the e-file. Another equally futile try after 18...Rxe3 is: 19 Nxc6 Rae8! 20 Nb4 Qh2 and White runs into similar issues on the e-file and second rank. Both positions are easily resignable for White, but Black doesn't play the killer blow!
+
+<br>
+
+18 **... Rac8??**<br>
+
+Missing my chance to close out the game. I thought the Rxe3 line was pretty strong, but under zeitnot I couldn't clearly see the ends of the lines, and I thought that putting the rook on the c-file first would be good prep to play Rxe3 next move and it seemed less commital and more safe. However, White could simply play Nxc6 or c3 and nullify any advantage Black could have had.
+
+<br>
+
+19 **c3 b5**<br>
+20 **gxh5 gxh5??**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "2r1r1k1/2qb1pb1/p1n5/1p1p3p/3N3P/2P1BP2/PP1QB3/1K1RR3 w - - 0 21"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Black gets sidetracked from his queenside attack and begins reacting to White's attack instead. Ignoring the kingside and continuing with 20...b4! was the correct course of action, which leaves the game relatively even with both sides having attacking chances. Instead, Black never gets the chance to play b4 due to erroneously opening the g-file for White's pieces.
+
+<br>
+
+21 **Rg1 Rxe3**<br>
+22 **Qxe3 Nxd4**<br>
+23 **Qxd4 Bf5+**<br>
+24 **Bd3 Bxd3+**<br>
+25 **Rxd3 1-0**<br>
+
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "2r3k1/2q2pb1/p7/1p1p3p/3Q3P/2PR1P2/PP6/1K4R1 b - - 0 25"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Black resigns in disgust.
+
+<br>
+
+[Site "https://lichess.org"]<br>
+[Date "April 7th, 2020"]<br>
+[White "GM Unknown"]
+[Black "Jay Shapiro"]
+[Result "1-0"]
+[WhiteElo "2676"]
+[BlackElo "1742"]
+[TimeControl "5m + 2s"]
+[ECO "B76"]
+[Opening "Sicilian Defense: Dragon Variation, Yugoslav Attack, Modern Line"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 O-O 8. Qd2 Nc6 9. O-O-O d5 10. Qe1 e6 11. Kb1 a6 12. h4 h5 13. Be2 Qc7 14. exd5 Nxd5 15. Nxd5 exd5 16. Qd2 Re8 17. Rhe1 Bd7 18. g4 Rac8 19. c3 b5 20. gxh5 gxh5 21. Rg1 Rxe3 22. Qxe3 Nxd4 23. Qxd4 Bf5+ 24. Bd3 Bxd3+ 25. Rxd3 1-0

@@ -199,6 +199,9 @@ White has the easy drawing line of 28 Rxb8+ Rxb8 29 Ke2 Rb2+ 30 Rxb2 Bxb2 31 Kd3
 29 **Rxb2 Bxb2**<br>
 30 **Rc2 Bf6**<br>
 31 **g3 a4**<br>
+
+Black still has his rook behind his passed pawn and can push with impunity, constricting the freedom of movement of the White rook after it takes up its post on a2 to inhibit further progress.<br>
+
 32 **Ra2 a3?**<br>
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
@@ -216,3 +219,75 @@ plot(game)
 
 <br>
 
+Pushing the pawn here is premature, as Black needs to control the a3-f8 diagonal with Be7 to prevent White from playing Bc5 and garnering the key diagonal for himself. Whichever dark-squared bishop does not occupy the key diagonal will be shunted to the a3-c1 diagonal, a much less appetizing locality for fighting over the a3 square.<br>
+
+33 **Bc1? ...**<br>
+
+Strangely, Black voluntarily takes up residence on the inferior diagonal!<br>
+
+33 **... Be7**<br>
+34 **Ke3 Rb8**<br>
+35 **Kf4? ...**<br>
+
+This seemingly active move actually causes White a big headache. While centralizing one's king is usually a good idea in endgames, in this particular case the king gets tangled up in the pawns. With his superior rook and bishop activity, Black can punish White for his insolence by cutting the king off of the third rank:<br>
+
+35 **... Rb3**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "6k1/4bp2/6p1/7p/4PK1P/pr3PP1/R7/2B5 w - - 6 36"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Examine the stark contrast between each ivory piece and its obsidian counterpart:<br>
+-Bishop: Stuck passively on c1 vs actively defending on e7 and able to give checks
+-Rook: Stuck passively on a2 barricading a pawn vs controlling the third rank and eyeing the f-pawn and g-pawn
+-King: Trapped in the middle of the board defending pawns and being harrassed vs safe behind the kingside pawn shelter
+-Pawns: Giving the White king claustrophobia and becoming targets vs passed pawn and sheltering the Black king while restricting the White king<br>
+
+36 **g4 Bd6+**<br>
+
+Although g4 loses by force, it is difficult to recommend an improvement over the text, and in fact Stockfish 11 sees nothing better. Some noteworthy tries:
+A) 36 Ra1 Bf8! 37 e5 (mandatory) a2! and White will have to give up his bishop for the a-pawn
+B) 36 e5 Rb4+ 37 Ke3 Rb1 38 Kd2 Rb3 39 Ke2 Kf8 and White is paralyzed while Black gets his king into the center and targets e5 
+C) 36 Rc2 Kg7 37 g4 Bxh4 38 gxh5 gxh5 39 Ra2 Be7 and now White has to contend with the perils of not one but two outside passed pawns, both of which are well-defended
+D) 36 Rc2 Kg7 37 Ra2 g5+! 38 hxg5 Kg6 and White is collapsing
+E) 36 Rc2 Kg7 37 e5 Rb1! 38 Ke4 a2 39 Rxa2 Rxc1 and again Black wins a piece for the pawn<br>
+
+37 **e5 Rb4+**<br>
+38 **Ke3 Bc5+**<br>
+39 **Kd3 hxg4**<br>
+40 **fxg4 Rxg4**<br>
+41 **Bg5 Rd4+**<br>
+42 **Kc3 Re4**<br>
+43 **Bf6 Bd4+**<br>
+44 **Kd3 Rf4**<br>
+45 **Rc2 Kh7**<br>
+46 **Rc8 Rxf6**<br>
+**0-1**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "2R5/5p1k/5rp1/4P3/3b3P/p2K4/8/8 w - - 0 47"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+White's last try at an active defense, rather than simply waiting for death. If Black doesn't find Rxf6 and instead resorts to g5 as an escape from the checkmate threat, after White plays Bxg5 the position is saved and the game would be drawn.

@@ -1,5 +1,5 @@
 ---
-title: 'Game 8: Boulevard of Broken Queens'
+title: 'Game 8: Shapiro vs Matthiesen'
 author: "Jay Shapiro"
 output: 
   html_document:
@@ -90,16 +90,14 @@ plot(game)
 
 <br>
 
-Both sides had been playing logical developing moves, getting their minors pieces on good squares, ensuring king safety, and fighting for control of the center. Black makes the first misstep  
-
-Be5 isn't a good move for several reasons. First, the bishop is already well-placed on its fianchetto diagonal and it isn't any stronger in the middle of the board, and even becomes more likely to become a target. Second, the Black king is now even more exposed, making moves like g4 even stronger for White than when the bishop was providing some coverage to the king. Third, Black needed to play Ne7 to contest the d5 square and get the knight into the action. One doesn't play the Novosibirsk line to neglect playing Ne7 at some point, since the whole point of putting the bishop on g7 is to leave e7 open for the knight.
+Both sides had been playing logical developing moves, getting their minors pieces on good squares, ensuring king safety, and fighting for control of the center. Black makes the first misstep by sallying his dark-sqaured bishop into the fray. Be5 isn't a good move for several reasons. First, the bishop is already well-placed on its fianchetto diagonal and it isn't any stronger in the middle of the board, and even becomes more likely to become a target. Second, the Black king is now even more exposed, making moves like g4 even stronger for White than when the bishop was providing some coverage to the king. Third, Black needed to play Ne7 to contest the d5 square and get the knight into the action. One doesn't play the Novosibirsk line to neglect playing Ne7 at some point, since the whole point of putting the bishop on g7 is to leave e7 open for the knight.
 
 <br>
 
 18 **f4 exf3**<br>
 19 **gxf3 Ne7**<br>
 
-Black finally gets Ne7 into his move list, but not until White opened the g-file and broke up Black's strong center pawns, leaving the d-pawn and f-pawn isolated.
+Black finally gets Ne7 into his move list, but not until after White had already opened the g-file and broke up Black's strong center pawns, leaving the d-pawn and f-pawn isolated.
 
 <br>
 
@@ -107,7 +105,22 @@ Black finally gets Ne7 into his move list, but not until White opened the g-file
 21 **Nxd5 Kh8**<br>
 22 **f4? ...**<br>
 
-White rushes things, trying to prematurely blast open the position before getting his king off of the open diagonal. Slipping in Kb1 first before launching the attack was the prudent choice.
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r2q1r1k/7p/p2pb3/1p1Nbp1Q/5P2/2P5/PPB4P/2KR3R b - - 0 22"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+White rushes the matter, trying to prematurely blast open the position before getting his king off of the open diagonal. Slipping in Kb1 first before launching the attack was the prudent choice.
 
 <br>
 
@@ -119,5 +132,41 @@ Failing to recognize the danger, Black does not try to trade queens with a move 
 
 25 **Rxf5 Be5?**<br>
 
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r4r1k/4q2p/p2p4/1p2bR1Q/8/2P5/PPB4P/1K5R w - - 1 26"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
 Black certainly seems to have a penchant for playing Be5 inappropriately, doing it not once, but twice in the last 9 moves! Black needs to trade off some pieces to dull White's attack, and he also needs to get his a-rook into the game, which has not been participating as of yet. Better is 25...Rxf5 26 Qxf5 Rf8 27 Qd3 and only then 27...Be5, with all of Black's pieces seeing action on the board and the danger against the Black king somewhat mitigated.<br>
+
+26 **Rhf1 Rxf5**<br>
+27 **Rxf5 Rf8???**<br>
+28 **Rxf8+ Qxf8**<br>
+29 **Qxh7#**<br>
+
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "5q1k/7Q/p2p4/1p2b3/8/2P5/PPB4P/1K6 b - - 0 29"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
 

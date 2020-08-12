@@ -1,7 +1,11 @@
 ---
-title: "Game_6"
+title: "Game 6: Jay Shapiro vs NM Brian Goldstein"
 author: "Jay Shapiro"
-output: html_document
+date: "4/24/2020"
+output: 
+  html_document:
+    theme: cerulean
+  pdf_document: default
 ---
 
 
@@ -17,7 +21,7 @@ Moves:
 4 **Nxd4 Nf6**<br>
 5 **Nc3 a6**<br>
 
-Signaling the Najdorf Sicilian.
+Signaling the Najdorf variation of the Sicilian Defense, always a very trendy opening at all levels of play.
 
 <br>
 
@@ -85,7 +89,22 @@ Strange that Black was averse to playing Be7 before lunging at the White knight 
 16 **Qd2 Nb6**<br>
 17 **c4! ...**<br>
 
-White is as cool as a cucumber left outside in Antarctica. In absolutely no hurry to play Nc6, he first reinforces his d-pawn with c4, perceiving that Black lacks the gumption to extricate himself from the perilous situation. The knight WILL take up residency on c6 and it isn't taking "no" for an answer.
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "1r1q1rk1/4bpp1/pn1p1n2/N2Pp2p/2P5/4BP2/PP1Q2PP/1K1R1B1R b - - 0 17"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+White is as cool as a cucumber that was left outside in Antarctica. In absolutely no hurry to play Nc6, he first reinforces his d-pawn with c4, perceiving that Black lacks the gumption to extricate himself from the perilous situation. The knight WILL take up residency on c6 and it isn't taking "no" for an answer.
 
 <br>
 
@@ -100,6 +119,21 @@ White is as cool as a cucumber left outside in Antarctica. In absolutely no hurr
 20 **b3 Rc8**<br>
 21 **Ka1 Nc5**<br>
 22 **Rc3? ...**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "2r3k1/1rq1bpp1/p1Np1n2/2nPp2p/2P5/1PR1BP2/P2Q2PP/K4B1R b - - 4 22"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
 
 White lets his concentration slip and makes his first real error. While the intent to give extra defense to the b-pawn is understandable, the rook now blocks the queen from defending the a5 square, so Black may push his a-pawn forwards to control the crucial b4 square. Now White will be unable to kick the knight on c5 by playing b4, which was the best move here instead of Rc3. 
 
@@ -130,7 +164,22 @@ Black finally gets a5 in, but by now it has lost all of its potency. White would
 
 <br>
 
-26 **a4?? ...*<br>
+26 **a4?? ...**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "2r2bk1/1rq2pp1/2Np1n2/p1nP3p/P1P5/1PR1BP2/3QB2P/KR6 b - - 0 26"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
 
 White's cerebral cortex temporarily switches off and his hand takes hold of the steering wheel of its own accord. Irrational fear of Black playing a4 followed by axb3 leads White to jam down a4 himself so that Black cannot. This just weakens the b-pawn and delays the kingside attack, and if Black had played a4, White could have simply played b4 to hard counter it. White is still winning, but he is desperately trying to throw the game hard enough to become an MLB pitcher.
 
@@ -146,7 +195,22 @@ Somewhere deep down inside, Black snaps like a brittle twig under the crushing w
 28 **fxe4 Nxe4**<br>
 29 **Qd4 Bxh6**<br>
 30 **Qxe4 Bg7**<br>
-31 **Nd4?? ...*<br>
+31 **Nd4?? ...**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "2r3k1/1rq2pb1/3p2p1/p2P3p/P1PNQ3/1PR5/4B2P/KR6 b - - 2 31"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
 
 Absolute lunacy enters the frontal lobes of White. His greed for preserving the largest material advantage possible here (up a full minor piece) overwhelms his common sense. A much stronger and pragmatic line is 31 Kb2 Bxc3+ 32 Kxc3, leaving White with a smaller material advantage but maintaining the octopus on c6, having a safe king, a better queen, more space on the queenside and center, and plenty of open lines against Black's king. Black's position would be incredibly cramped, devoid of joy, and waiting for the suffering to end, not unlike a dog in his cage waiting to be taken to the vet for an annual checkup.
 
@@ -168,4 +232,81 @@ White breathes a massive sigh of relief at Black's ill-advised Better was Qxa4, 
 34 **Qxd4 Rxb3+**<br>
 35 **Rxb3 Qxb3+**<br>
 
-A crucial moment, as White has three ways to get out of check and one of them is much better than the other two. By far the worst move is Ka1, which is mate in 4 for Black. Better is Kc1, which gives White a large advantage but does allow Black to create a passed pawn on the file and 
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "2r3k1/5p2/3p2p1/p2P3p/P1PQ4/1q6/4B2P/1K1R4 w - - 0 36"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+A crucial moment, as White has three ways to get out of check and one of them is much better than the other two. By far the worst move is Ka1, which is mate in 4 for Black. Better is Kc1, which gives White a large advantage but does allow Black to create a passed pawn on the a-file and yields two pawns for the bishop. The best move is:
+
+<br>
+
+36 **Qb2 Qxa4**<br>
+37 **Qb5 Qa3**<br>
+38 **Rd3 ...**<br>
+
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "2r3k1/5p2/3p2p1/pQ1P3p/2P5/q2R4/4B2P/1K6 b - - 3 38"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+The point of Qb2 is that after Black takes the a-pawn, White can force him to trade queens with this neat combination. With the queens off the board, White is closer to being able to convert his material advantage to a resounding victory. Trading off the rooks is the next step in his game plan, after which Black's a-pawn falls and White can create a passed pawn in the center.
+
+<br>
+
+38 **... Qc5**<br>
+39 **Qxc5 Rxc5**<br>
+40 **Rb3 g5**<br>
+41 **Rb6 Kg7**<br>
+42 **Rxd6 g4**<br>
+43 **Rc6 1-0**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "8/5pk1/2R5/p1rP3p/2P3p1/8/4B2P/1K6 b - - 1 43"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+White traps the Black rook, forcing Black to trade the rooks off and White easily queens his c-pawn before the Black king can saunter his way over to defend. Black has been tortured long enough and reluctantly raises his hands up in defeat.
+
+<br>
+
+[Date "April 9th, 2020"]<br>
+[Result "1-0"]<br>
+[WhiteElo "1751 USCF"]<br>
+[BlackElo "2290 FIDE"]<br>
+[TimeControl "30m + 1m"]<br>
+[ECO "B90"]<br>
+[Opening "Sicilian Defense: Najdorf Variation, English Attack"]<br>
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Be3 e5 7. Nb3 Be6 8. f3 h5 9. Qd2 Nbd7 10. O-O-O b5 11. Kb1 b4 12. Nd5 Bxd5 13. exd5 Be7 14. Qxb4 O-O 15. Na5 Rb8 16. Qd2 Nb6 17. c4 Qc7 18. Nc6 Rb7 19. Rc1 Na4 20. b3 Rc8 21. Ka1 Nc5 22. Rc3 Bf8 23. Be2 e4 24. Rb1 exf3 25. gxf3 a5 26. a4 g6 27. Bh6 Nfe4 28. fxe4 Nxe4 29. Qd4 Bxh6 30. Qxe4 Bg7 31. Nd4 Qc5 32. Rd1 Qa3+ 33. Kb1 Bxd4 34. Qxd4 Rxb3+ 35. Rxb3 Qxb3+ 36. Qb2 Qxa4 37. Qb5 Qa3 38. Rd3 Qc5 39. Qxc5 Rxc5 40. Rb3 g5 41. Rb6 Kg7 42. Rxd6 g4 43. Rc6 1-0
