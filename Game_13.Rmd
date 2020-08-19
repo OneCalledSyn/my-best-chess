@@ -1,0 +1,197 @@
+---
+title: "Game 13: GM Tilicheev vs Shapiro"
+author: "Jay Shapiro"
+date: "8/18/2020"
+output: 
+  html_document:
+    theme: cerulean
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+1 **c4 e5**<br>
+2 **Nc3 Nf6**<br>
+3 **g3 d5**<br>
+4 **cxd5 Nxd5**<br>
+5 **Bg2 Nb6**<br>
+6 **Nf3 Nc6**<br>
+7 **0-0 Be6?**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+library(rchess)
+library(tidyverse)
+library(ggplot2)
+library(plotly)
+
+game <- Chess$new()
+
+fen <- "r2qkb1r/ppp2ppp/1nn1b3/4p3/8/2N2NP1/PP1PPPBP/R1BQ1RK1 w kq - 6 8"
+
+game$load(fen)
+```
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+A natural looking move, but ill-advised as it allows White to play an early d4. Better is playing Be7 first and then Be6 later.<br>
+
+8 **a3? Be7**<br>
+
+Black is not punished, as White chooses a very passive move instead of taking advantage of the error.<br>
+
+9 **b4 0-0**<br>
+10 **Bb2 ...**<br>
+
+Rb1 is the vastly preferred move for White, as Bb2 allowed Black to play Nc4 with tempo if he so desires.<br>
+
+10 **... f5**<br>
+11 **d3 Bf6**<br>
+12 **Rc1 a5?!**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r2q1rk1/1pp3pp/1nn1bb2/p3pp2/1P6/P1NP1NP1/1B2PPBP/2RQ1RK1 w - - 0 13"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Black forces the pawn thrust too early on the queenside. The idea is that if Black trades his a-pawn for either of White's queenside pawns, Black will still have a fully intact pawn structure, but White will have either an isolated a-pawn or an isolated b-pawn, depending on how the trade occurs. However, White need not trade and after pushing to b5 he will maintain a comfortable edge after the trades in the center.<br>
+
+13 **b5 Nd4**<br>
+14 **Nxd4 exd4**<br>
+15 **Na4 Bd5?**<br>
+
+Despite the awkwardness of the position, Black could have tried to hang on with Rb8 and grovel for equality. Now White has either 16 Bxd5+ Nxd5 17 Qb3 and 18 Nc5 or 16 Bxd5+ Qxd5 17 Rc5 Qd7 18 Qb3+ and then 19 Rfc1, both of which win material and give White a tremendous advantage.<br>
+
+16 **Nxb6? cxb6**<br>
+17 **Bxd5+ Qxd5**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r4rk1/1p4pp/1p3b2/pP1q1p2/3p4/P2P2P1/1B2PP1P/2RQ1RK1 w - - 0 18"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+White makes the peculiar decision to eschew capturing on d5 immediately with clearly winning plans, and instead only hamstrings Black's queenside pawn structure. While White's position does look more pleasant than Black's, it hardly seems like something to write home about and Black does have a central space advantage that hinders the progression of White's center pawns.<br>
+
+18 **Qa4 Rac8**<br>
+19 **Rc4? ...**<br>
+
+Black's space advantage was offsetting the extra pawn White had on the kingside. After 19...Rxc4 20 Qxc4 Qxc4 21 dxc4, White no longer has the extra pawn advantage to work with. His 3 queenside pawns will stare down Black's 3 queenside pawns and Black will have the sole advantage of the extra space.<br>
+
+19 **... Rfd8?**<br>
+
+Not capitalizing on White's faux pas.<br>
+
+20 **Rfc1 Qe6??**<br>
+
+Losing to the very simple 21 Rxc8 Rxc8 22 Rxc8 Qxc8 23 Bxd4, giving White a material advantage and a passed d-pawn.<br>
+
+21 **Qc2? ...**<br>
+
+Declining the free material for unknown reasons.<br>
+
+21 **... Rxc4**<br>
+22 **Qxc4 Kf7**<br>
+23 **Qxe6+ Kxe6**<br>
+24 **Rc7 Rd7**<br>
+25 **Rxd7 Kxd7**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "8/1p1k2pp/1p3b2/pP3p2/3p4/P2P2P1/1B2PP1P/6K1 w - - 0 26"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+The position has evolved into what's known as a "two outcome game": Either White is going to win or the game will end in a draw. With the queenside pawns locked in place, the battle is basically B + 4P vs B + 5P with White being up an e-pawn. Black seeks to set up a defensive perimeter to permanently keep out the White king and ensconse his own within an inpenetrable fortress, and failing that, try to trade all the pawns off.<br>
+
+26 **a4 Ke6**<br>
+27 **Kg2 Kd5**<br>
+28 **Kf3 Be5**<br>
+
+The White king is denied the opportunity of reaching the fourth rank.<br>
+
+29 **h3 g6**<br>
+30 **g4 fxg4+??**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "8/1p5p/1p4p1/pP1kb3/P2p2p1/3P1K1P/1B2PP2/8 w - - 0 31"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Black failed to see that it was imperative to keep a pawn on f5 to clamp down on the e4 square, although in fairness to Black even in post mortem analysis it may be a difficult to comprehend how fxg4+ loses eventually, especially with Black keeping his kingside pawn structure intact and White ending up with an isolated outside pawn. The counterintuitive 30...h5! 31 gxf5 gxf5 (or 31 gxh5 gxh5 leads to the same exact position) should be enough to hold the fourth rank for a draw.<br>
+
+31 **Kxg4 Bf6**<br>
+32 **Kf3 Be5**<br>
+
+Black does everything in his power to prevent White from playing e3, since White getting connected passers would likely be an imminently winning advantage. 33 e3 looks solid at first glance to a weaker player, but actually loses on the spot to 33...dxe3 34 Bxe5 exf2! 35 Kxf2 Kxe5. Be5 makes this tricky countershot work out tactically, while also cutting White's king off from the f4 square.<br>
+
+33 **Kg2 Bf4**<br>
+
+White's bishop isn't pulling its weight on b2 and it is actually a liability in several scenarios because it hangs after the Black d-pawn captures. 33 Bc1 would have been a good way for the bishop to self-actualize and White could have gotten in his e3 push.<br>
+
+34 **Kf3 Be5**<br>
+35 **Kg2 Bf4**<br>
+36 **Kf3 Be5**<br>
+   **Draw agreed**<br>
+   
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "8/1p5p/1p4p1/pP1kb3/P2p4/3P1K1P/1B2PP2/8 w - - 11 37"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+   
+White was unable to find the proper way forward, or thought that a breakthrough was infeasible. Black jubilantly escaped with a draw after making a serious blunder that should have sealed his fate.<br>

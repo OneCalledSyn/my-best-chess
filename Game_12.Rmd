@@ -1,0 +1,172 @@
+---
+title: "Game 12: Kamsky vs Shapiro"
+author: "Jay Shapiro"
+date: "8/17/2020"
+output: 
+  html_document:
+    theme: cerulean
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<br>
+
+1 **d4 Nf6**<br>
+2 **Nf3 g6**<br>
+3 **Bf4 Bg7**<br>
+
+Gata whips out his patented London System, one of his favorite weapons as White. I rarely face the London, so the resulting position and structures were unfamiliar to me.<br>
+
+4 **c3 0-0**<br>
+5 **Nbd2 e6**<br>
+6 **h3 c5?1**<br>
+
+Although c5 is the second-most popular choice in the position, the engine throws a fit if one does not play 6...Nbd7 instead.<br>
+
+7 **dxc5 dxc5**<br>
+8 **e4 b6**<br>
+9 **e5 Nd5**<br>
+10 **Bg3 Nc6**<br>
+11 **Qa4?! Bb7**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+library(rchess)
+library(tidyverse)
+library(ggplot2)
+library(plotly)
+
+game <- Chess$new()
+
+fen <- "r2q1rk1/pb2ppbp/1pn3p1/2pnP3/Q7/2P2NBP/PP1N1PP1/R3KB1R w KQ - 5 12"
+
+game$load(fen)
+```
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Better is 11.Bc4 to make way for White to castle and develop a minor piece. It's not yet clear where the Queen will be optimally placed to exert her influence, so striking out for a4 is slightly premature. Meanwhile, Black has castled and has all of his minor pieces developed, fully equalizing White's first move advantage.<br>
+
+12 **Qh4 e6**<br>
+
+Oddly, the computer doesn't mind Qh4 at all, but it seems rather strange and inefficient to spend two tempi to swing the Queen to h4 where it truly is not doing anything more than it was on d1.
+Black's response threatens to win material on e5 after a Queen trade on h4, and also fixes the White center pawn on a dark square, damping the g3 bishop's scope and making the e5 pawn a potential target down the road.<br>
+
+13 **Qxd8 Raxd8**<br>
+14 **Nc4 f6?**<br>
+
+Black misconstrues the situation and voluntarily unleashes White's dark-squared bishop, removes e5 as a target, and gives himself a weak isolated e-pawn. A much better endeavor would have been sauntering the horse on c6 to f5 via the e7 square, where the pony's hooves kick at the bishop on g3 and also discourage White from playing his own knight to d6.<br>
+
+15 **exf6 Bxf6**<br>
+16 **0-0-0 Ba6?**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "3r1rk1/p6p/bpn1pbp1/2pn4/2N5/2P2NBP/PP3PP1/2KR1B1R w - - 2 17"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+The game was still relatively even, but Black had a sparse set of moves to keep the status quo of equality. Things really start to fall apart for Black after Ba6, as the isolated pawn on e6 is surprisingly indefensible.<br>
+
+17 **Re1 Bxc4?**<br>
+
+Black continues to worsen his position under his own volition, with only mild prodding from White. Black gives away the bishop pair while simultaneously developing a minor piece...for his opponent. The bishop on c4 is incredibly well-placed, striking many key targets and lined up with the sable monarch. The only upside of such a strange decision is that Black does not yet incur a material deficit and therefore (in his mind) can still hold on for equality.<br>
+
+18 **Bxc4 Rfe8**<br>
+19 **Bb5 Rc8**<br>
+20 **Re2 Kf7**<br>
+21 **Rhe1 Re7**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "2r5/p3rk1p/1pn1pbp1/1Bpn4/8/2P2NBP/PP2RPP1/2K1R3 w - - 7 22"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+22 **Kc2? ...**<br>
+
+In a position with no paucity of reasonable options, Kamsky loses his footing and plays the seemingly innocuous Kc2. A quiet move that marginally improves the position of a piece in an already winning position normally shows the restraint and patience of a good player to slowly build a winning advantage in a position where tempo is not of the essence. However, Kamsky runs into a tactical shot that wrests a large chunk of White's advantage out of his hands.<br>
+
+22 **... a6!**<br>
+
+White is forced to trade his Bishop for the c6-knight or get stomped on, alleviating the leukopenia infecting Black on the light squares. The obvious looking 23 Bxa6 gives Black the cheeky combo of 23...Ndb4+ 24 cxb4 Nxb4+ 25 Kb1 Nxa6, 23 Ba4 b5 24 Bb3 c4 would trap the White bishop, 23 Bc4 b5 and White has to give up his bishop for a knight anyway, or 23 Bd3? Ndb4+! 24 cxb4 Nxb4+ and White finds himself actually much worse, as the bishop on d3 is indefensible after 25 Kd2 Rd7 26 Re3 c4.<br>
+
+23 **Bxc6 Rxc6**<br>
+24 **Be5 Rc8**<br>
+25 **Bxf6 Kxf6**<br>
+26 **Ne5 ...**<br>
+
+More prudent was g3 to keep the ebony knight away from the f4 square, although White isn't losing material  after 26...Nf4 27 Re3 Nxg2? 28 Rf3+ Kg7 29 Re4! Rf8 30 Rxf8 Kxf8 31 Rg4 Ne1 32 Kd2! Taking advance squares away from knights restricts their movements and limits their efficacy.<br>
+
+26 **... Nf4**<br>
+27 **Ng4+? ...**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "2r5/4r2p/pp2pkp1/2p5/5nN1/2P4P/PPK1RPP1/4R3 b - - 3 27"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+White forces the king to move, giving him the opportunity to get off the f-file. This would mean the g2 pawn is actually hanging because Rf3 would no longer come with check in the line where the knight is trapped.<br>
+
+27 **... Kf7?**<br>
+
+Black instantly counterblunders, missing the opportunity to play Kg7 and win a clean pawn and shatter the integrity of White's kingside pawn structure. Unfortunately, Black mistakenly deduced that Kf7 was winning for the same reason that Kg7 was, but he miscalculated.<br>
+
+28 **Re4 Nxg2??**<br>
+
+The fatal blunder brings about the denouement of the back and forth skirmish.<br>
+
+29 **Rg1 Nh4**<br>
+30 **Nh6+ 1-0**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "2r5/4rk1p/pp2p1pN/2p5/4R2n/2P4P/PPK2P2/6R1 b - - 3 30"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+With the king tucked away on g7, there would have been no Nh6+ to unleash a discovery on the wayward knight on h4 and Black would be a pawn to the good. Black probably could have played on here, as White can easily go astray even with the extra piece. For example, if he tries to extricate his knight from h6 immediately e.g. 30 Nh6+ Kg7 31 Rxh4 Rf8 32 Ng4?? Rf4 and Black is actually doing alright; he will get to double rooks on the f-file and play h5 to slash at the precariously defended knight. However, 32 f4! instead and White will easily maintain his winning advantage.<br>
