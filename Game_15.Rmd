@@ -1,0 +1,275 @@
+---
+title: "Game 15: NM Mattrm vs Shapiro"
+author: "Jay Shapiro"
+output: 
+  html_document:
+    theme: cerulean
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+1 **e4 c5**<br>
+2 **Nf3 d6**<br>
+3 **d4 cxd4**<br>
+4 **Nxd4 Nf6**<br>
+5 **Nc3 g6**<br>
+6 **Bc4 Bg7**<br>
+7 **f3 0-0**<br>
+8 **Be3 Nc6**<br>
+9 **Qd2 Bd7**<br>
+10 **0-0-0 ...**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+library(rchess)
+library(tidyverse)
+library(ggplot2)
+library(plotly)
+
+game <- Chess$new()
+
+fen <- "r2q1rk1/pp1bppbp/2np1np1/8/2BNP3/2N1BP2/PPPQ2PP/2KR3R b - - 6 10"
+
+game$load(fen)
+```
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+So far, the game has followed the old main line of the Yugoslav Attack, one of White's best attempts to reduce the fiery Sicilian Dragon to a non-threatening smolder. In the modern line, White eschews moving his light-squared bishop to c4 and goes for a quicker queenside castle and Black strikes out in the center with d5 since the bishop is not defending that square. In the old main line with the bishop on c4, Black never has the chance to play d5 but he does get to gain some time harassing the light-squared bishop with his rook and knight.<br>
+
+10 **... Rc8**<br>
+
+Black moves his rook to the semi-open c-file, giving long term pressure against the four units White currently has stationed there. Black also threatens immediate tactical destruction if White plays a quiet move such as Kb1 or an impatient move such as h4 and elects not to move his bishop to safety. For example, 11. h4?? Nxd4 12.Qxd4 Ng4! and White is losing at least a piece.<br>
+
+11 **Bb3 Ne5**<br>
+
+White moves the bishop out of danger and Black increases the scope of his rook while also preparing to jump into c4 and hit crucial squares, typically prompting White to give up his light-squared sniper in exchange for Secretariat's life.<br>
+
+12 **Kb1 ...**<br>
+
+White steps his king out of the path of the Black rook to preemptively avoid future pins or checkmate threats on c2.
+
+12 **... Nc4**<br>
+
+The most common move for Black is Re8, but Nc4 is the alternate move of choice. That being said, the results for Black (at least in the lichess database) for 12...Nc4 are aggressively uninspiring. After 13. Bxc4 Rxc4 14. g4 there are 330 games in the database, with White winning 65% and drawing 21% of them, leaving a paltry 14% of the games being won by the Black pieces. The only recent super GM game with 12...Nc4 was played between Wesley So and Duda, and Wesley won convincingly with White. Personally, I will be sticking to the Re8 line from now on but the braver souls may venture down the road less travelled if they so choose.<br>
+
+13 **Bxc4 Rxc4**<br>
+14 **b3 Rc8**<br>
+15 **Nd5 ...**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "2rq1rk1/pp1bppbp/3p1np1/3N4/3NP3/1P2BP2/P1PQ2PP/1K1R3R b - - 2 15"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Finally the game exits previously played territory, with other games in the same position all featuring 15. g4 instead of Nd5. The reasoning for playing g4 is that White starts his kingside pawn storm and will gain a tempo on Black's knight when White plays g4-g5 and then White can bring his knight into d5 after Black moves his own knight away from f6. Playing Nd5 immediately lets Black liquidate the knights and avoid White's g5 tempo gaining move. Furthermore, it costs White two tempi (Nd5 + exd5) and Black only one tempo (Nxd5) for this exchange, so Black gains time and can launch his b-pawn before White can thrust his g-pawn.<br>
+
+15 **... Nxd5**<br>
+16 **exd5 b5**<br>
+17 **h4 a5?**<br>
+
+Imperative for Black is finding the saving grace of 17...Qc7!, because every other reasonable-looking move gives White an advantage after either 18. h5, 18. Bh6, or 18. g4. <br>Examples: <br>
+
+17...Re8 (to avoid Bh6) 18. h5 and Black has no good answer. An engine will suggest 18...g5 19. Bxg5 and just give up a pawn to keep the h-file closed, but as a human player I would sooner agree to have both of my hands broken one finger at a time than I would acquiesce to playing 18...g5 there.<br>
+
+The text move 17...a5? 18. Bh6 Bxh6 19. Qxh6 with h5 to follow, opening the h-file.<br>
+
+17...h5 (to stop White from playing h5) 18. g4 with following moves such as gxh5, Rg1, Bh6 and a very strong attack.<br>
+
+18 **Bh6 Qb6??**<br>
+
+In his desperation to keep the White queen off the h-file, Black actually makes thing much worse and fails to even accomplish his goal. The White queen will not be denied now. While 18...Bxh6 19. Qxh6 f6 20. h5 g5 would have still been  unpleasant for Black, the h-file remaining closed is critical to Black surviving the coming assault.<br>
+
+19 **Bxg7 Kxg7**<br>
+20 **h5 ...**<br>
+
+Black doesn't have time to play f6 before g5 now, so his g-pawn is guaranteed to take a big hit right on the chin and files are opening up very rapidly on the kingside.<br>
+
+20 **... Rh8**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "2r4r/3bppkp/1q1p2p1/pp1P3P/3N4/1P3P2/P1PQ2P1/1K1R3R w - - 1 21"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+"And Black is setting up the pieces for the next game", as Ben Finegold would probably quip after seeing such a sad move like Rh8. Black wants to cover the h6 square after the h-file opens to guard against Qh6+ mating nets.
+
+21 **hxg6?? ...**<br>
+
+Strangely, White just allows Black to be set free of the tortorous prison he had been entombed within. White can increase the pressure substantially with 21. Rde1 so that after the pawns and rooks are traded on the kingside, White wins material and shatters Black's pawn structure, leaving Black with an isolani on d6. Interestingly, Black actually has no good way to defend his threatened e-pawn:<br>
+
+21...Rhe8?? and White has forced mate after 22. hxg6<br>
+
+21...Rce8 22. hxg6 hxg6 23. Qc3! f6 24. Qe3! Qd8 24. Rxh8 Rxh8 (24...Kxh8 25. Rh1+ forces mate) 25. Qxe7+ wins easily.<br>
+
+21...Qd8 22. hxg6 hxg6 23. Rxh8 Qxh8 (23...Kxh8 24. Qh6 forces mate) 24. Rxe7 is also a knockout blow.<br>
+
+21 **... hxg6**<br>
+22 **Rxh8 Rxh8**<br>
+23 **Qe3 Qd8**<br>
+
+Black is still on the back foot, but he has survived the brunt of the attack and escaped the game-ending lines with some generosity from White.<br>
+
+24 **Qc3 Kg8**<br>
+
+Stepping out of the way of a nasty discovered check e.g. 24...b4??? 25. Ne6+ and mate next move.<br>
+
+25 **Nc6 Bxc6**<br>
+
+Forced, but Black is okay with it since he can swing his rook around to help the queen scoop up the c-pawn.<br>
+
+26 **dxc6 Rh5??**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "3q2k1/4pp2/2Pp2p1/pp5r/8/1PQ2P2/P1P3P1/1K1R4 w - - 1 27"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Black winds up like Roger Clemens and tosses the game at about 100 miles per hour. For the second time this game, Black misses the critical Qc7, fixing the c-pawn in place and keeping a5 defended as well. The issue with Rh5 is that after 27. c7 Qc8 28. g4!!, Black is totally lost. There are no safe squares on the 5th rank for the rook, and after it retreats to h8/h7, White will simply play Qxa5-Qb6-Qb8, snuffing Black out with the threat of promotion. Note that 28...Rc5 fails to the simple 29. Qxc5 dxc5 30. Rd8+ and White is a queen to the good.<br>
+
+27 **Qxa5?? ...**<br>
+
+Allowing Black to get in Rc5 and salvage a lost cause.<br>
+
+27 **... Rc5**<br>
+28 **Rd4 Qxc7**<br>
+29 **Rd4 Qxc7**<br>
+30 **Qxc7 Rxc7**<br>
+31 **Rb4 Rc5**<br>
+32 **c4 bxc4**<br>
+
+The game looks to be headed towards a fairly drawish rook and pawn endgame, but even in positions that may look boring and simple on the surface, there is almost always room to go astray.<br>
+
+33 **Rxc4 Kf8??**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "5k2/4pp2/3p2p1/2r5/2R5/1P3P2/P5P1/1K6 w - - 1 34"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Trading rooks and the running the king to the c-file is a straightforward method for drawing the position, but Black gets confused and runs the king before trading the rooks, so instead of White having isolated pawns on the a-file and the c-file, it is Black who gets the isolated c-pawn while White maintains a protected passed pawn on the a-file.<br>
+
+34 **Rxc5 dxc5**<br>
+35 **Kc2 Ke8**<br>
+36 **Kc3 Kd7**<br>
+
+Both players look to centralize their kings, an important tenet of endgame play. Once all the heavy firepower has diminished, the kings become quite strong in their own regard.<br>
+
+37 **Kc4 Kc6**<br>
+38 **a4 ...**<br>
+
+White starts to get his win condition rolling: the passed a-pawn needs to queen or distract the Black king long enough for White to transition to the kingside and chow down on Black's pawns.<br>
+
+38 **... f5**<br>
+
+Black tries to get some form of counterplay in the center.<br>
+
+39 **a5? ...**<br>
+
+Executing your plan better than your opponent executes their own plan can potentially win chess games. But executing your plan while denying their plan typically makes the win much easier. White could have played 39. f4 and slammed the door in Black's face, denying his center pawn storm.<br>
+
+39 **... e5**<br>
+
+Black trudges onwards with his pawns, although there is nothing Black can do to pull out a draw without tremendous help from White. White should be able to convert handily.<br>
+
+40 **a6 e4**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "8/8/P1k3p1/2p2p2/2K1p3/1P3P2/6P1/8 w - - 0 41"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Black forcibly makes his own passed pawn, White must capture on e4 or the win vanishes from sight:<br>
+
+A) 41. a7 Kb7 and White must now take on e4 to draw, other moves lose<br>
+B) 41. b4 e3 42. b5+ Kb6 43. Kd3 is also a draw<br>
+C) 41. f4 Kb6 and Black will pick up the a-pawn for free as Black's king must babysit the passed e-pawn, winning easily<br>
+D) 41. Kc3 exf3 42. gxf3 g5 and Black again has a simple victory by creating a passer on the kingside and picking off White's a-pawn and b-pawn<br>
+
+A deceptively complicated position when you're over the board and lack the luxury of a silicon friend to guide your path to enlightenment.<br>
+
+41 **fxe4 fxe4**<br>
+42 **Kc3?? ...**<br>
+
+White has five legal moves, four of which draw and only one wins, and he fails to differentiate the winner from the drawer. White stumbles at the final hurdle, ruining everything he had worked so hard for. The only way to win is 42. b4!, removing the annoyance of the c-pawn preventing the White king from accessing the d4 square. Then, the White king can gobble the e-pawn and g-pawn while Black's king must get rid of the a-pawn. Finally, White runs his sole remaining g-pawn to royalty on g8 while Black can only look on in utter despair with his lone king.<br>
+
+42 **... Kb6**<br>
+43 **Kd2 Kxa6**<br>
+44 **Ke3 Kb5**<br>
+45 **Kxe4 Kb4**<br>
+46 **Kd5 1/2 - 1/2**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "8/8/6p1/2pK4/1k6/1P6/6P1/8 b - - 2 46"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+White offers a draw and Black accepts, although perhaps it was prudent to force White to play one more move before allowing a draw, since after 46...g5 White loses unless he plays 47. g4, and Black in kind must also be wary because any move other than 47...Kb5 will lose for Black. From there, both players just king shuffle and the game is dead drawn.<br>
+
+
+

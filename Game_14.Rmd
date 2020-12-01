@@ -1,0 +1,217 @@
+---
+title: "Game 14: FM Laarhoven vs Shapiro"
+author: "Jay Shapiro"
+output: 
+  html_document:
+    theme: cerulean
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+1 **e4 c5**<br>
+2 **Nf3 d6**<br>
+3 **d4 cxd4**<br>
+4 **Nxd4 Nf6**<br>
+5 **Nc3 g6**<br>
+6 **Be3 Bg7**<br>
+7 **Be2 Nc6**<br>
+8 **Qd2 0-0**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+library(rchess)
+library(tidyverse)
+library(ggplot2)
+library(plotly)
+
+game <- Chess$new()
+
+fen <- "r1bq1rk1/pp2ppbp/2np1np1/8/3NP3/2N1B3/PPPQBPPP/R3K2R w KQ - 6 9"
+
+game$load(fen)
+```
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+A deviation from the first time we clashed in this line, where Black had previously played 8...Ng4 instead of castling. White responds by castling queenside immediately, which signals the Grigoriev variation instead of the Amsterdam variation seen in Game 1, despite the positions looking incredibly similar.<br>
+
+9 **0-0-0 Ng4**<br>
+10 **Bxg4 Bxg4**<br>
+11 **f3 Bd7**<br>
+12 **Nxc6 Bxc6?!**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r2q1rk1/pp2ppbp/2bp2p1/8/4P3/2N1BP2/PPPQ2PP/2KR3R w - - 0 13"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Although Stockfish and top players all prefer 12...bxc6 in this position, I was unhappy with the weak a-pawn from our last encounter and I couldn't find a way to generate any pressure with the b-file either. Black plans to keep his pawn structure intact and play on the c-file and aspire to achieve minor piece dominance with his bishop pair.<br>
+
+13 **Bd4 f6?!**<br>
+
+Black stubbornly digs his heels in and refuses to cede his important dark squared bishop. While Bxd4 is objectively better, Black sticks to his guns and refuses to trade. The first issue with moving the f-pawn is that it blocks the bishop from exerting any pressure. Black hopes to someday change this, but for the foreseeable future the g7 bishop is about as useful as a snowblower in Texas.<br> 
+
+The second issue is that g6 is now weakened and Black's kingside pawn structure is even more vulnerable to White's imminent pawn avalanche with h4, g4, h5, etc. Stockfish wastes no time in hastily getting the snow flowing, suggesting an immediate h4 followed up by g4 and a sarcastic "Good luck!"<br>
+
+14 **Ne2? ...**<br>
+
+Sicilian Dragon games are not exactly known for being slow and positional; they are typically highly tactical and every last move counts for quite a bit. Ne2 is a poor selection for several reasons. First, it isn't getting the pawns rolling for the kingside attack. Second, it blocks the queen from utilizing the second rank. Many times in this kind of position, White wants to play Qh2 or Qg2 to make a battery at a critical time and now there's a hay-filled equestrian emoblus impeding her majesty's options. Third, this move weakens White's kingside defenses unnecessarily before the knight is needed in the attack and deprives the knight the option of jumping into d5.<br>
+
+14 **... a5**<br>
+
+Black wastes no time in launching his own incursion on the other side of the field. After all, a good offense is the best kind of defense.<br>
+
+15 **h4 ...**<br>
+
+Perhaps seeing Black push his a-pawn kicked White's neurons into gear and reminded him that he should be doing a similar attack.<br>
+
+15 **... a4**<br>
+16 **h5 g5??**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r2q1rk1/1p2p1bp/2bp1p2/6pP/p2BP3/5P2/PPPQN1P1/2KR3R w - - 0 17"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Black does manage to avoid the overtly abysmal move 16...gxh5??, which opens the g-file and gives him doubled isolated h-pawns, and opts for the subtly abysmal move which leads to a precarious pawn shield and little counterplay on the queenside after 17. h6 Bh8 18. a3 and now Black cannot play a3 himself and he will be stuck with his snowblower locked in a shed on h8 and backwards pawns on the h-file and b-file. The move Black could not find was 16...Qa5, threatening a queen trade to lessen the danger of opening the h-file and keeping the pawns solid.<br>
+
+17 **Bc3? ...**<br>
+
+White leaves the shed door slightly ajar instead of securing the door with a padlock. Now Black can get some wiggle room and also solidify his g-pawn's defenses by playing h6. Black can also play a3 and jam a thorn into White's tender b-pawn.<br>
+
+17 **... Qc7?**<br>
+
+Squandering a very crucial tempo with a slow developing move instead of the necessary a3 followed by h6.<br>
+
+18 **h6 Bh8**<br>
+19 **f4?? ...**<br>
+
+White finally pushes his pawn to h6 but then immediately follows up his intelligent space-gaining move with an unsound pawn sacrifice in an attempt to expedite his attack. Much better is to follow up with a3 and prophylactically nullify Black's pawn push, as mentioned several times already.<br>
+
+19 **... Bxe4**<br>
+20 **Ng3 Bg6**<br>
+21 **fxe5?? ...**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r4rkb/1pq1p2p/3p1pbP/6P1/p7/2B3N1/PPPQ2P1/2KR3R b - - 0 21"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Understandably, White presses forward in his efforts to pry open the clamshell around the pearl that is the Black king. Unfortunately, Black's light-squared bishop becomes too powerful if White elects not to play f5 to cram it back into the recesses of the Black encampment.<br>
+
+21 **... fxg5**<br>
+22 **Bxh8 Kxh8**<br>
+23 **Ne4 a3**<br>
+
+Black finally gets his a3 push in to disrupt the White queenside pawns.<br>
+
+24 **Qd4+?? ...**<br>
+
+White needed to deal with the situation on the queenside instead of spite checking Black. The issue is that after 24...e5, Black's queen is attacked and he is compelled to move it elsewhere, allowing Black to take on b2.<br>
+
+24 **... Rf6??**<br>
+
+Black kindly avoids the conspicuously strong e5 and plays the spicy move Rf6 to complicate matters needlessly. Despite this, Black still has quite a strong position.<br>
+
+25 **Nc3?? ...**<br>
+
+White should definitely play Rhf1 and get his rook into the action to put pressure on f6. Notice that White's knight completes its tour de farce and returns home to c3 where it should have stayed in the first place back on move 14.<br>
+
+25 **... axb2+**<br>
+26 **Kxb2 e5**<br>
+27 **Qb4?? ...**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "r6k/1pq4p/3p1rbP/4p1p1/1Q6/2N5/PKP3P1/3R3R b - - 1 27"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+White needed his queen to defend the f2 square. After Qb4, Black can win quickly with 27...Rf2 28. Rc1 Rf4 29. Qb5 Ra5 30. Qb3 Bf7 and the White is actually trapped!<br>
+
+27 **... Ra6**<br>
+
+Black misses the knockout blow, but still has a tremendous attack mounting with a superior position and well-placed pieces.<br>
+
+28 **Rd2?? ...**<br>
+
+White needed to tuck his king into the corner and swing his rooks over to try to hold. Leaving his king and queen on the same file was a silly gaffe.<br>
+
+28 **... Rf4**<br>
+
+Black brings his last piece into the attack with tempo.<br>
+
+29 **Qb3 Rb6**<br>
+30 **Nb5 Qc5**<br>
+31 **Rd5 ...**<br>
+
+White does everything he can to bind his possessions together with fragile twine, but Black brought his stainless steel scissors.<br>
+
+31 **... Rxb5**<br>
+32 **Qxb5 Rb4+**<br>
+33 **Qxb4 Qxb4+**<br>
+34 **Kc1 Bxc2**<br>
+**0-1**<br>
+   
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "7k/1p5p/3p3P/3Rp1p1/1q6/8/P1b3P1/2K4R w - - 0 35"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Seeing that White will add the win of a rook for his bishop on top of the existing material disparity, White raises his hands in forfeiture.
