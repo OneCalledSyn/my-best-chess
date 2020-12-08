@@ -1,0 +1,212 @@
+---
+title: "Game 17: FM Galaktionov vs Shapiro"
+author: "Jay Shapiro"
+output: 
+  html_document:
+    theme: cerulean
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+1 **d4 Nf6**<br>
+2 **Nf3 g6**<br>
+3 **c4 Bg7**<br>
+4 **Nc3 d5**<br>
+5 **cxd5 Nxd5**<br>
+6 **e4 Nxc3**<br>
+7 **bxc3 c5**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+library(rchess)
+library(tidyverse)
+library(ggplot2)
+library(plotly)
+
+game <- Chess$new()
+
+fen <- "rnbqk2r/pp2ppbp/6p1/2p5/3PP3/2P2N2/P4PPP/R1BQKB1R w KQkq - 0 8"
+
+game$load(fen)
+```
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+In typical Hypermodern fashion, Black allows White to amass a legion on central pawns and proceeds to strike at the bastion from the flanks while White tries to maintain the amalgamation of foot soldiers as best he can.<br>
+
+8 **Be3 Qa5**<br>
+9 **Qd2 ...**<br>
+
+Both parties are fighting tooth and nail over control of the c3 and d4 squares.<br>
+
+9 **... 0-0**<br>
+10 **Rc1 Rd8**<br>
+11 **d5 e6**<br>
+
+Black goads White into pushing his d-pawn forward and then continues to strike at the pawn chain with e6, exerting as much pressure as possible.<br>
+
+12 **c4 Qxd2+**<br>
+13 **Nxd2? ...**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "rnbr2k1/pp3pbp/4p1p1/2pP4/2P1P3/5N2/P2B1PPP/2R1KB1R b K - 0 13"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+White's bishop was positioned on a great square already, threatening the undefended pawn on c5 and controlling the center. Better is to play 13. Nxd2, freeing the f-pawn and defending both bases of the central pawn chain, e4 and c4.<br>
+
+13 **... b6**<br>
+
+Defending c5 and opening lines up for the light-squared bishop.<br>
+
+14 **Bc3 Bb7**<br>
+
+White spends several tempi trying to trade off Black's fianchettoed dark-squared bishop. This can often be a worthwhile endeavor in many positions where Black has pawns on h7-g6-f7, because Black will have weaknesses on the dark squares after his bishop is traded off, making it easier for White's kingside attack to crash through. However, in this particular scenario, White did not castle queenside to launch a quick kingside attack, and Black's king will not be in toom much with the queens off the board and no pawns advancing on his fortress. The two tempi White spends on initiating the trade will be happily spent by Black on developing the rest of his pieces and piling up even more on the center files.<br>
+
+15 **Bxg7 Kxg7**<br>
+16 **Bd3? Re8?**<br>
+
+Both players miss that Bd3 is a poor move because it pins White's d-pawn, allowing Black to slip in the cheeky 16...b5!, busting open White's center immediately and Black's idyllic dreamscape becomes a harsh reality for White. If White elects not to take on b5 and crumble his center, Black has the option of following up with b4 for a long-term space advantage and an eventual threat of creating a passer with his b-pawn and a-pawn vs White's long a-pawn.<br>
+
+17 **0-0 f5**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "rn2r3/pb4kp/1p2p1p1/2pP1p2/2P1P3/3B1N2/P4PPP/2R2RK1 w - - 0 18"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Black continues to lash out against the White center, this time hitting the base of the pawns at e4.<br>
+
+18 **exf5 exd5**<br>
+19 **Nd2 ...**<br>
+
+The White knight lands where it should have been six moves ago. Note that White could have added more pawn reinforcement with f3 if his Knight was not in the way from his mishap back on move 13.<br>
+
+19 **... dxc4**<br>
+20 **Nxc4 Nc6**<br>
+21 **fxg6 Rad8**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "3rr3/pb4kp/1pn3P1/2p5/2N5/3B4/P4PPP/2R2RK1 w - - 1 22"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Black has dissolved White's center pawns like sugar cubes in a swimming pool. With a 3-on-1 queenside pawn majority, a passed c-pawn, centralized rooks, a strong fianchettoed bishop, and a great outpost on d4 for his knight, Black's position is looking profoundly promising. White's position isn't exactly horrible because his pieces are fine, but he will be on the back foot because of his isolated a-pawn and dealing with Black's c-pawn.<br>
+
+22 **Bb1 hxg6**<br>
+23 **Re1 Nd4**<br>
+
+Threatening Ne2+ winning the Exchange for Black and settling into the juicy outpost square where White will struggle to dislodge him.<br>
+
+24 **Ne5 g5**<br>
+
+Saving the g-pawn from capture.<br>
+
+25 **f3 ...**<br>
+
+Making luft for the king, giving it access to f2 so it can quickly get to the center, while also brunting the scope of the bishop on b7.<br>
+
+25 **... Re6**<br>
+
+Preparing to double rooks on the e-file, the only file with no pawns on it. Remember, rooks crave open files for maximum activity!<br>
+
+26 **Kf2 Rde8**<br>
+27 **Nc4 Re2+**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "4r3/pb4k1/1p6/2p3p1/2Nn4/5P2/P3rKPP/1BR1R3 w - - 5 28"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Black tries to shove White off the e-file and own it all for himself.<br>
+
+28 **Rxe2 Rxe2+**<br>
+
+White decides that the outlook is sunnier if he trades a pair of rooks and then runs his king forward. White can attempt to keep contesting the e-file if he plays 28. Kf1, but if Black finds 28...g4! then White ends up losing a pawn (or his king if he's not careful):<br>
+
+A) 29. fxg4??? (or 29. f4???) Bxg2+ 30. Kg1 Nf3#<br>
+B) 29. Nd6 Rxe1+ 30. Rxe1 Ba6+ 31. Kf2 Rxe1 32. Kxe1 gxf3 wins a pawn for Black<br>
+C) 29. Bd3 Rxe1+ 30. Rxe1 Rxe1+ 31. Kxe1 gxf3 similarly wins the pawn<br>
+
+29 **Kg3 Bd5**<br>
+
+Centralizing the bishop, hitting the knight on c4 and x-raying through to the pawn on a2.<br>
+
+30 **a3 ...**<br>
+
+Stepping the pawn up to a dark square where it will always be safe from the bishop, which is confined to the light squares.<br>
+
+30 **... Kf6**<br>
+
+Centralizing the king, a powerful piece in the endgame, and defending his g-pawn.<br>
+
+31 **Nd6??? ...**<br>
+
+The mounting pressure Black had been slowly building finally gets to White, and his mental shatters. Playing a knight that deep into enemy territory undefended is akin to pushing an actual horse into an active volcano and then acting astonished that it succumbs to the scalding hot magma.
+
+31 **... Re6**<br>
+    **0-1**<br>
+    
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "8/p7/1p1Nrk2/2pb2p1/3n4/P4PK1/6PP/1BR5 w - - 3 32"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Black clears the e2 square for his knight, threatening Ne2+ winning a full rook. White cannot defend against the peril while also salvaging the menace posed to his equine compatriot by the Black rook, and hence tips over his king.

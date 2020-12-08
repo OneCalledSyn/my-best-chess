@@ -1,0 +1,125 @@
+---
+title: "Game 16: GM A. Zhigalko vs Shapiro - Round 2"
+author: "Jay Shapiro"
+output: 
+  html_document:
+    theme: cerulean
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+1 **e4 c5**<br>
+2 **Nf3 d6**<br>
+3 **d4 cxd4**<br>
+4 **Nxd4 Nf6**<br>
+5 **Nc3 g6**<br>
+6 **Be3 Bg7**<br>
+7 **Be2 0-0**<br>
+8 **Qd2 Ng4?!**<br>
+
+Not learning from the round 1 showdown, Black plays Ng4 again instead of improving with Nc6.<br>
+
+9 **Bxg4 Bxg4**<br>
+10 **Bh6?! ...**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+library(rchess)
+library(tidyverse)
+library(ggplot2)
+library(plotly)
+
+game <- Chess$new()
+
+fen <- "rn1q1rk1/pp2ppbp/3p2pB/8/3NP1b1/2N5/PPPQ1PPP/R3K2R b KQ - 1 10"
+
+game$load(fen)
+```
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+White departs into the unknown.<br>
+
+10 **... Nc6**<br>
+11 **Bxg7 Kxg7**<br>
+12 **h3 ...**<br>
+
+Kicking the bishop back to d7 is very commonplace in these lines, but the objective is customarily done with f3, since White intends to play h4 in the near future. The text move signals that White will play f4 and play more in the center with the e-pawn and f-pawn than the traditional g-pawn and h-pawn pushes White prevalently employs.<br>
+
+12 **... Bd7**<br>
+13 **0-0-0 Rc8**<br>
+14 **f4 Qa5**<br>
+15 **Kb1 Kg8**<br>
+
+Both players take a brief respite from piece development to tuck their kings away to safer squares.<br>
+
+16 **Nb3 Qc7**<br>
+17 **Nd5 Qd8**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "2rq1rk1/pp1bpp1p/2np2p1/3N4/4PP2/1N5P/PPPQ2P1/1K1R3R w - - 7 18"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Black is being pushed into a corner and White has garnered himself a massive space advantage. White will look to smash his pawns into Black's kingside and center with all the destructive power of a tsunami. Black's humble life jacket will not save him from becoming a torrential tribute.<br>
+
+18 **h4 h5**<br>
+
+Stopping White from playing h5 first.<br>
+
+19 **f5 ...**<br>
+
+Opening up the White queen to travel to g5 or h6 while simultaneously striking Black's pawn chain in a tender spot.<br>
+
+19 **... Ne5**<br>
+
+Defending g6, opening the c-file for his rook, and giving the bishop some scenic squares on the queenside.<br>
+
+20 **Qh6 Ng4?**<br>
+
+Wasting time nipping at the queen's heels when the knight was already well-placed on e5. Worse, with the queen forced to g5, either e7 or g6 is crumbling for Black and there is no way to parry both threats concurrently. Black needed to play 20...Bc6 to improve his inert bishop, stop the danger on e7 and f6, and threaten to trade pieces. When under attack or at a spatial disadvantage, trading pieces can dissipate the attacking forces or relieve the cramping of the pieces. Since Black is both cramped and also under attack, trading pieces is extra good in this case.<br>
+
+21 **Qg5 Kh7**<br>
+22 **Nxe7 Qc7**<br>
+
+Black's pipe dream of counterplay on c2 will never come remotely close to fruition.<br>
+
+23 **fxg6+ fxg6**<br>
+24 **Qxg6+ Kh8**<br>
+25 **Qxh5+ Kg7**<br>
+26 **Qg6+ Kh8**<br>
+27 **Rd5 1-0**<br>
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+fen <- "2r2r1k/ppqbN3/3p2Q1/3R4/4P1nP/1N6/PPP3P1/1K5R b - - 4 27"
+
+game$load(fen)
+
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+plot(game)
+
+```
+
+<br>
+
+Black has only a single spite check on c2 available before White brings the hammer down on his denuded monarch.<br>
